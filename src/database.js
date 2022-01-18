@@ -1,3 +1,11 @@
+import book_1 from '../public/images/book_1.png'
+import book_2 from '../public/images/book_2.png'
+import book_3 from '../public/images/book_3.png'
+import book_4 from '../public/images/book_4.png'
+import book_5 from '../public/images/book_5.png'
+import book_6 from '../public/images/book_6.jpg'
+
+
 export default {
 	navigation: [
 		{ title: `Announcements` },
@@ -71,34 +79,33 @@ export default {
 	books: [
 		{
 			title: 'Radicalizing Care',
-			writers: 'Birgit Bosold, Lena Fritsch, Vera Hofmann, Elke Krasny, Sophie Lingg',
-			cover: 'book_1.jpg'
-		},
-		{
-			title: 'Curating the Complex & The Open Strike',
-			writers: 'TERRY SMITH',
-			cover: 'book_2.jpg'
+			writers: 'BIRGIT BOSOLD, LENA FRITSCH, VERA HOFMANN, ELKE KRASNY, SOPHIE LINGG',
+			cover: book_1
 		},
 		{
 			title: 'Amazonia',
 			writers: 'KATERYNA BOTANOVA, QUINN LATIMER',
-			cover: 'book_3.jpg'
+			cover: book_3
 		},
 		{
-
-			title: 'Parapolitics',
-			writers: 'ANSELM FRANKE, NIDA GHOUSE, PAZ GUEVARA, ANTONIA MAJACA (EDS.)',
-			cover: 'book_4.jpg'
+			title: 'Curating the Complex & The Open Strike',
+			writers: 'TERRY SMITH',
+			cover: book_2
 		},
 		{
 			title: 'Visual Cultures as Time Travel',
 			writers: 'HENRIETTE GUNKEL, AYESHA HAMEED',
-			cover: 'book_5.jpg'
+			cover: book_5
+		},
+		{
+			title: 'Parapolitics',
+			writers: 'ANSELM FRANKE, NIDA GHOUSE, PAZ GUEVARA, ANTONIA MAJACA (EDS.)',
+			cover: book_4
 		},
 		{
 			title: 'Dear Navigator',
 			writers: 'HU FANG',
-			cover: 'book_6.jpg'
+			cover: book_6
 		},
 	],
 

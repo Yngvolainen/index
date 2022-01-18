@@ -1,5 +1,7 @@
+import database from './database.js'
+
 export default {
-	state() {
-		return {};
+	modules: {
+		database
 	},
 };
