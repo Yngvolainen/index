@@ -45,7 +45,7 @@ export default {
         grid-gap: 0.5em;
     }
 
-     @media screen and (min-width: 769px) {
+    @media screen and (min-width: 769px) {
         .books__items {
             grid-template-columns: repeat(6, 1fr);
         }
