@@ -4,7 +4,7 @@
             <h2>Books</h2>
         </header>
         <div class="books__items">
-            <section v-for="book in database.books" :key="book.index">
+            <section v-for="book in bookStore" :key="book.index">
                 <div>
                     <img :src="book.cover" :alt="book.title">
                 </div>
@@ -23,11 +23,17 @@
 <script>
 import database from '../database.js'
 export default {
-      data() {
-         return {
+    data() {
+        return {
             database
-         }
-      }
+        }
+    },
+
+    computed: {
+        bookStore() {
+            return this.$store.getters.getBooks;
+        }
+    },
    }
 </script>
 
