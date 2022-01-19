@@ -1,23 +1,40 @@
 <template>
-   <div class="article-preview">preview
-      <div class="article-preview__title">preview title</div>
-      <div class="article-preview__lead">preview lead</div>
-      <div class="article-preview__image">preview image</div>
+   <div class="article-preview">
+      <h3 class="article-preview__title"> {{ article.title }}</h3>
+      <p class="article-preview__lead"> {{ article.lead }}</p>
+      <img class="article-preview__image" :src="article.preview.image"/> 
    </div>
 </template>
 
 <script>
-   import Database from '../database.js';
-
    export default {
-      data() {
-         return {
-            Database
+      props: {
+         article: {
+            type: Object
          }
       }
    }
-
 </script>
 
 <style>
+   .article-preview {
+      font-family: 'JetBrainsMono';
+      padding: 30px;
+      text-align: center;
+   }
+
+   .article-preview__title {
+      font-size: 50px;
+      padding-bottom: 40px;   /* medium */
+   }
+
+   .article-preview__lead {
+      font-size: 20px;
+      padding-bottom: 20px; /* small */
+   }
+
+
+   @media screen and (min-width: 768px) { /* minwidth fordi mobile first konsept */
+
+   }
 </style>

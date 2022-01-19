@@ -1,21 +1,27 @@
 <template>
-   articleS
-    <!-- loop med previews som igjen inneholder articler
-                     - loop med articlene  -->
-   <div> test henting av tittel: {{ Database.articles[0].title }}</div>
+   <ArticlePreview v-for="article in articles" :article="article"/>
+
+   <!-- article clickable -> route article.vue -->
 </template>
 
 <script>
-   import Database from '../database.js';
+   import ArticlePreview from '../components/ArticlePreview.vue';
 
    export default {
-      data() {
-         return {
-            Database
+      components: {
+         ArticlePreview
+      },
+
+      computed: {
+         articles() {
+            return this.$store.getters.getArticles
          }
       }
    }
+
+
 </script>
 
 <style>
+
 </style>
