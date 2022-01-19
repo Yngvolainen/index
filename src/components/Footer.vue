@@ -1,13 +1,15 @@
 <template>
 <section class="footer">
 
-<h3 class="footer__title">in(dex)</h3>
+<h3 class="footer__title">{{title}}</h3>
+
+<div class="footer__adress">{{adress}}</div>
 
 <nav class="footer__navigation">
-	<p class="footer__navigation-link">About us</p> 
-	<p class="footer__navigation-social">Instagram</p> 
-	<p class="footer__navigation-social">Twitter</p> 
-	<p class="footer__navigation-mail"> in@dex.info </p>
+	<div class="footer__navigation-link">{{about}}</div> 
+	<div class="footer__navigation-social">{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon" class="footer__navigation-icon"></div> 
+	<div class="footer__navigation-social">{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon" class="footer__navigation-icon"></div> 
+	<p class="footer__navigation-mail"> {{mail}} </p>
 </nav>
 
 </section>	
@@ -16,6 +18,16 @@
 
 <script>
 export default {
+	data() {
+			return {
+                title: 'in(dex)',
+                about: 'About Us',
+					 adress: '172 Classon Avenue. Brooklyn, NY 11205. USA',
+                instagram: 'Instagram',
+                twitter: 'Twitter',
+                mail: 'in@dex.info',
+			};
+		},
 	
 }
 </script>
@@ -31,6 +43,9 @@ export default {
 .footer__navigation {
 	margin-right: 50px;
 }
+.footer__navigation-icon {
+  width: 9px;
+}
 
 .footer__navigation-link {
 	margin-bottom: 20px;
@@ -38,4 +53,16 @@ export default {
 .footer__navigation-mail {
 	margin-top: 20px;
 }
+
+    @media screen and (min-width: 768px) {
+        .footer {
+            display: flex;
+        }  
+		 
+	 }
+    @media screen and (max-width: 768px) {
+	 .footer__adress {
+        display: none;
+		  }
+	 }
 </style>
