@@ -141,12 +141,8 @@ export default {
 				}
 			]
 		}
-	},
-
-
-	getters: {
-		getNavigationPages(state) {
-			return state.navigation;
-		}
 	}
+
+
+	
 }
