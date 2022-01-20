@@ -39,7 +39,7 @@ export default {
 	padding: 30px;
 	display: flex;
 	justify-content: space-between;
-	font-size: 30px;
+	font-size: 1.5rem;
 }
 .footer__navigation {
 	margin-right: 50px;
