@@ -40,6 +40,7 @@ export default {
 	display: flex;
 	justify-content: space-between;
 	font-size: 1.5rem;
+	font-family: 'JetBrainsMono';
 }
 .footer__navigation {
 	margin-right: 50px;
