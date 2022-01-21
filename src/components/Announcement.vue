@@ -26,15 +26,17 @@ export default {
     .marquee {
         background: var(--highlight);
         width: 100vw;
-        height: 40px;
+        height: 62px;
     }
 
     .marquee__message {
+        width: 100%;
         height: 100%;
         animation: scrolling 14s linear infinite;
         list-style: none;
         display: flex;
         align-items: center;
+        position: relative;
     }
 
     @keyframes scrolling {
@@ -43,10 +45,11 @@ export default {
     }
 
     .marquee__message li {
+        position: absolute;
         display: flex;
         justify-content: center;
         align-items: center; 
-        font-size: 30px;   
+        /* font-size: 30px;    */
     }
 
     .marquee__message li:hover {
