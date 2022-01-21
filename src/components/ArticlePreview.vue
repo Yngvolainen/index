@@ -1,5 +1,5 @@
 <template>
-   <div class="article-preview">
+   <div class="article-preview" @click="emitFullArticle">
       <h3 class="article-preview__title"> {{ article.title }}</h3>
       <p class="article-preview__lead"> {{ article.lead }}</p>
       <img class="article-preview__image" :src="article.preview.image"/> 
@@ -11,6 +11,12 @@
       props: {
          article: {
             type: Object
+         }
+      }, 
+
+      methods: {
+         emitFullArticle() {
+            this.$emit('fullArticle', this.article);
          }
       }
    }
