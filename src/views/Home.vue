@@ -3,7 +3,7 @@
     <!--Announcement /-->
     <Articles />
     <Journal />	 
-    <Footer />
+    <Footer /> 
 </template>
 
 <script>

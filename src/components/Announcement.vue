@@ -25,7 +25,7 @@ export default {
 <style>
     .marquee {
         background: var(--highlight);
-        width: 100vw;
+        width: 100%;
         height: 62px;
     }
 
@@ -40,8 +40,8 @@ export default {
     }
 
     @keyframes scrolling {
-        0% { transform: translateX(100vw); }
-        100% { transform: translateX(-10vw); }
+        /* 0% { transform: translateX(100%); } */
+        /* 100% { transform: translateX(-10%); } */
     }
 
     .marquee__message li {
