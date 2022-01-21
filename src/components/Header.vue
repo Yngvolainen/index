@@ -88,7 +88,7 @@ import Announcement from '../components/Announcement.vue';
     .header__logo,
     .navigation__logo {
         font-size: 1.5rem;
-        font-family: 'JetBrains Mono', monospace;
+        font-family: var(--main-font);
     }
 
     .header__icons, 
@@ -100,7 +100,7 @@ import Announcement from '../components/Announcement.vue';
 
     .header__icons img,
     .navigation__icons img {
-        width: 22px;
+        width: 5px;
     }
 
     .navigation {
@@ -111,7 +111,7 @@ import Announcement from '../components/Announcement.vue';
         align-items: flex-start;
         background: #E3E3E3;
         padding: 10px;
-        font-family: 'JetBrains Mono', monospace;
+        font-family: var(--main-font);
         font-size: 25px; 
         position: absolute;
     }
@@ -133,6 +133,10 @@ import Announcement from '../components/Announcement.vue';
 
     .navigation__menu--desktop {
         display: none;
+    }
+
+    .navigation__menu--desktop li div img {
+        width: 9px;
     }
 
     .navigation__menu--desktop li:nth-child(2) {
