@@ -144,7 +144,11 @@ export default {
 	getters: {
         getNavigationPages(state) {
             return state.navigation;
-        }
+        },
+
+		announcement(state) {
+			return state.announcement;
+		}
 	}
 }
 	

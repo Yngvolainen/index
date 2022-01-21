@@ -1,12 +1,16 @@
 <template>
-    <header v-if="!isNavigationVisible" class="header">            <!-- When isNavigationVisible === false header will be disappear -->
-        <div class="header__logo">{{ title }}</div>
+    <header v-if="!isNavigationVisible">  <!-- When isNavigationVisible === false header will be disappear -->
+        <div class="header">       
+            <div class="header__logo">{{ title }}</div>
 
-        <div class="header__icons">
-            <img class="header__search-icon" src="/svg/search.svg" alt="search-icon">
+            <div class="header__icons">
+                <img class="header__search-icon" src="/svg/search.svg" alt="search-icon">
 
-            <button @click="toggleNavigation"><img src="/svg/hamburger.svg" alt="hamburger-icon"></button>
+                <button @click="toggleNavigation"><img src="/svg/hamburger.svg" alt="hamburger-icon"></button>
+            </div>
         </div>
+
+        <Announcement />
     </header>
 
     <!-- Navigation shows when hamburger icon clicked -->
@@ -39,7 +43,12 @@
 </template>
 
 <script>
+import Announcement from '../components/Announcement.vue';
 	export default {
+        components: {
+            Announcement
+        }, 
+
 		data() {
 			return {
                 title: 'in(dex)',
