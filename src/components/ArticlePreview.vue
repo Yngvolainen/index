@@ -33,6 +33,17 @@
       padding-bottom: var(--lineheight-small); /* small */
    }
 
+   .article-preview__0 {
+      
+   }
+   .article-preview__1 {
+      
+   }
+
+   .article-preview__2 {
+      
+   }
+
    @media screen and (min-width: 768px) {
        /* minwidth fordi mobile first konsept */
 
