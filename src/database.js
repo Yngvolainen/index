@@ -159,8 +159,9 @@ export default {
 			return state.pages;
 		},
     
-    getArticles(state) {
-			return state.articles;
+   		getArticles(state) {
+			return state.articles;  
+		}
 	}
 }
 	
