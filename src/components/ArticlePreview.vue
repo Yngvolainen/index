@@ -33,12 +33,9 @@
       padding-bottom: var(--lineheight-small); /* small */
    }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 @media screen and (min-width: 768px) { /* minwidth fordi mobile first konsept */
-=======
-=======
+
    .article-preview__0 {
       
    }
@@ -49,11 +46,6 @@
    .article-preview__2 {
       
    }
+}
 
->>>>>>> Add article classname
-   @media screen and (min-width: 768px) {
-       /* minwidth fordi mobile first konsept */
->>>>>>> Update to variables
-
-   }
 </style>
