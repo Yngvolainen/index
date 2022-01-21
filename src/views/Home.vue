@@ -1,6 +1,8 @@
 <template>
+
     <Header />
     <!-- <Announcement /> -->
+
 </template>
 
 <script>
