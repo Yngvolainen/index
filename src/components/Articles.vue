@@ -28,13 +28,14 @@
 
 <style>
 
-/* legge under mediaqueri */
    .articles__preview {
       display: grid;
       grid-template-columns: repeat(12, 1fr) ;
    }
 
-   .articles__preview-0, .articles__preview-1, .articles__preview-2 {
+   .articles__preview-0, 
+   .articles__preview-1, 
+   .articles__preview-2 {
       grid-column: 1/ span 12;
    }
 
