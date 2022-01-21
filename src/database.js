@@ -152,6 +152,10 @@ export default {
 
 		announcement(state) {
 			return state.announcement;
+		},
+
+		getAbout(state) {
+			return state.pages;
 		}
 	}
 }
