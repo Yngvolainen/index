@@ -1,7 +1,7 @@
 <template>
    <ArticlePreview v-for="article in articles" :article="article"/>
 
-   <!-- article clickable -> route article.vue -->
+   <!-- article clickable -> route article.vue --> 
 </template>
 
 <script>
