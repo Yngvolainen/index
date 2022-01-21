@@ -113,6 +113,7 @@ import Announcement from '../components/Announcement.vue';
         padding: 10px;
         font-family: 'JetBrains Mono', monospace;
         font-size: 25px; 
+        position: absolute;
     }
 
     .navigation__menu {

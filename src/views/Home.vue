@@ -4,7 +4,7 @@
     <Articles />
     <Books />
     <Journal />	 
-    <Footer />
+    <Footer /> 
 </template>
 
 <script>
