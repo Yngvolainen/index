@@ -1,10 +1,10 @@
 <template>
-   <div class="articles">
-      <div class="articles__preview">
+   <div class="article-previews">
+      <div class="article-previews__preview">
          <ArticlePreview 
                         v-for="(article, index) in articles" 
                         :article="article" 
-                        :class="'articles__preview-' + index" 
+                        :class="'article-previews__preview-' + index" 
                         @fullArticle="seeFullArticle" 
                         />
       </div>
@@ -24,23 +24,23 @@
             return this.$store.getters.getArticles
          },
 
-         firstArticleTitle() {
-            return this.$store.getters.getFirstArticleTitle
+         firstArticle() {
+            return this.$store.getters.getFirstArticle
          },
 
-         thirdArticleTitle() {
-            return this.$store.getters.getThirdArticleTitle
+         thirdArticle() {
+            return this.$store.getters.getThirdArticle
          }
       }, 
 
       methods: {
          seeFullArticle(article) {
-            if (article.title === this.firstArticleTitle) {
-               console.log('NAVIGERE TIL FØRSTE ARTIKKEL: ', article.title);
-            } else if (article.title === this.thirdArticleTitle) {
-               console.log('NAVIGERE TIL TREDJE ARTIKKEL', article.title);
-            }
+            if (article.title === this.firstArticle.title) {
+               this.$router.push('/' + this.firstArticle.slug)
 
+            } else if (article.title === this.thirdArticle.title) {
+               this.$router.push('/' + this.thirdArticle.slug);
+            }
          }
       }
    }
@@ -48,29 +48,29 @@
 </script>
 
 <style>
-   .articles__preview {
+   .article-previews__preview {
       display: grid;
       grid-template-columns: repeat(12, 1fr) ;
       cursor: pointer;
    }
 
-   .articles__preview-0, 
-   .articles__preview-1, 
-   .articles__preview-2 {
+   .article-previews__preview-0, 
+   .article-previews__preview-1, 
+   .article-previews__preview-2 {
       grid-column: 1/ span 12;
    }
 
    @media screen and (min-width: 768px) { /* minwidth fordi mobile first konsept */
 
-    .articles__preview-0 {
+    .article-previews__preview-0 {
       grid-column: 3/ span 8;
    }
 
-   .articles__preview-1 {
+   .article-previews__preview-1 {
       grid-column: 1/ span 6;
    }
 
-   .articles__preview-2 {
+   .article-previews__preview-2 {
       grid-column: 7/ span 6;
    }
 }

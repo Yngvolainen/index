@@ -163,12 +163,12 @@ export default {
 			return state.articles;  
 		},
 
-		getFirstArticleTitle(state) {
-			return state.articles[0].title;
+		getFirstArticle(state) {
+			return state.articles[0];
 		},
 
-		getThirdArticleTitle(state) {
-			return state.articles[2].title;
+		getThirdArticle(state) {
+			return state.articles[2];
 		},
 
 		getBooks(state) {
