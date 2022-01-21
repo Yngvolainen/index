@@ -13,11 +13,11 @@ import Journal from '../components/Journal.vue'
 
 export default {
 	components: {
-  Header
-  Announcement
-  Journal
+  Header,
+  Announcement,
+  Journal,
   Footer
 	},
+}
 
-
-<script>
+</script>
