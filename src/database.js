@@ -108,20 +108,20 @@ export default {
 					title: 'And My Flames Stay Till You Get Out My Way',
 					artist: 'April Bey',
 					location: 'Museum für Moderne Kunst',
-					image: 'journal_1.jpg'
+					image: '/images/journal_1.jpeg'
 				},
 				{
 					title: 'Crip Time',
 					artist: 'Kenny Fries',
 					location: 'Vienna Art Week',
-					image: 'journal_2.jpg'
+					image: '/images/journal_2.jpeg'
 				},
 				{
 					title: 'Losing Control',
 					artist: 'Alte Pinakothek',
 					location: 'Novuyo Moyo',
-					image: 'journal_3.jpg'
-				},
+					image: '/images/journal_3.jpeg'
+				}
 			],
 		
 			pages: [
@@ -140,11 +140,13 @@ export default {
 				}
 			]
 		}
-
+	},
+	getters: {
+		getJournal(state) {
+			return state.journal
 	},
 
-	getters: {
-        getNavigationPages(state) {
+     getNavigationPages(state) {
             return state.navigation;
         },
 
