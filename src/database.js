@@ -145,9 +145,9 @@ export default {
 	getters: {
 		getJournal(state) {
 			return state.journal
-	},
+		},
 
-     getNavigationPages(state) {
+     	getNavigationPages(state) {
             return state.navigation;
         },
 
@@ -162,6 +162,15 @@ export default {
    		getArticles(state) {
 			return state.articles;  
 		},
+
+		getFirstArticleTitle(state) {
+			return state.articles[0].title;
+		},
+
+		getThirdArticleTitle(state) {
+			return state.articles[2].title;
+		},
+
 		getBooks(state) {
 			return state.books
 		}

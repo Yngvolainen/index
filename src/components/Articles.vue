@@ -9,9 +9,6 @@
                         />
       </div>
    </div>
-   
-
-   <!-- article clickable -> route article.vue --> 
 </template>
 
 <script>
@@ -25,12 +22,25 @@
       computed: {
          articles() {
             return this.$store.getters.getArticles
+         },
+
+         firstArticleTitle() {
+            return this.$store.getters.getFirstArticleTitle
+         },
+
+         thirdArticleTitle() {
+            return this.$store.getters.getThirdArticleTitle
          }
       }, 
 
       methods: {
-         seeFullArticle() {
-            console.log('clicked');
+         seeFullArticle(article) {
+            if (article.title === this.firstArticleTitle) {
+               console.log('NAVIGERE TIL FØRSTE ARTIKKEL: ', article.title);
+            } else if (article.title === this.thirdArticleTitle) {
+               console.log('NAVIGERE TIL TREDJE ARTIKKEL', article.title);
+            }
+
          }
       }
    }
@@ -38,15 +48,15 @@
 </script>
 
 <style>
-
-/* legge under mediaqueri */
    .articles__preview {
       display: grid;
       grid-template-columns: repeat(12, 1fr) ;
       cursor: pointer;
    }
 
-   .articles__preview-0, .articles__preview-1, .articles__preview-2 {
+   .articles__preview-0, 
+   .articles__preview-1, 
+   .articles__preview-2 {
       grid-column: 1/ span 12;
    }
 
