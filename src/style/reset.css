@@ -12,8 +12,10 @@
 
 button {
 	cursor: pointer;
+	background: inherit;
+	border: none;
 }
 
 img {
-	width: 100%;
+	/* width: 100%; */
 }

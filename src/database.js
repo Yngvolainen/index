@@ -12,11 +12,12 @@ export default {
 				{ title: `Projects` },
 				{ title: `Podcasts` },
 			],
-
+		
 			information: {
 				address: `172 Classon Avenue. Brooklyn, NY 11205. USA`,
-			},
 
+			},
+		
 			announcement: {
 				message: `OUT NOW! Issue #123 “Dialogues on Recursive Colonialisms, Speculative Computation, and the Techno-social”`
 			},
@@ -69,14 +70,14 @@ export default {
 					},
 				},
 			],
-
+		
 			books: [
 				{
 					title: 'Radicalizing Care',
 					writers: 'Birgit Bosold, Lena Fritsch, Vera Hofmann, Elke Krasny, Sophie Lingg',
 					cover: '/images/book_1.png'
 				},
-				{
+				{	
 					title: 'Amazonia',
 					writers: 'KATERYNA BOTANOVA, QUINN LATIMER',
 					cover: '/images/book_2.png'
@@ -86,8 +87,7 @@ export default {
 					writers: 'TERRY SMITH',
 					cover: '/images/book_3.png'
 				},
-				{
-					title: 'Visual Cultures as Time Travel',
+				{	title: 'Visual Cultures as Time Travel',
 					writers: 'HENRIETTE GUNKEL, AYESHA HAMEED',
 					cover: '/images/book_4.png'
 				},
@@ -102,28 +102,28 @@ export default {
 					cover: '/images/book_6.png'
 				},
 			],
-
+		
 			journal: [
 				{
 					title: 'And My Flames Stay Till You Get Out My Way',
 					artist: 'April Bey',
 					location: 'Museum für Moderne Kunst',
-					image: 'journal_1.jpg'
+					image: '/images/journal_1.jpeg'
 				},
 				{
 					title: 'Crip Time',
 					artist: 'Kenny Fries',
 					location: 'Vienna Art Week',
-					image: 'journal_2.jpg'
+					image: '/images/journal_2.jpeg'
 				},
 				{
 					title: 'Losing Control',
 					artist: 'Alte Pinakothek',
 					location: 'Novuyo Moyo',
-					image: 'journal_3.jpg'
-				},
+					image: '/images/journal_3.jpeg'
+				}
 			],
-
+		
 			pages: [
 				{
 					name: 'About us',
@@ -141,10 +141,23 @@ export default {
 			]
 		}
 	},
+	getters: {
+		getJournal(state) {
+			return state.journal
+	},
 
-	getters: {  
+     getNavigationPages(state) {
+            return state.navigation;
+        },
+
+		announcement(state) {
+			return state.announcement;
+		},
+
 		getAbout(state) {
 			return state.pages;
 		}
-	},
+	}
 }
+	
+
