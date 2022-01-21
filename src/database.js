@@ -161,6 +161,9 @@ export default {
     
    		getArticles(state) {
 			return state.articles;  
+		},
+		getBooks(state) {
+			return state.books
 		}
 	}
 }
