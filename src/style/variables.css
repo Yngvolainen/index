@@ -1,6 +1,20 @@
 :root {
+	/* font */ 
+	--main-font: 'JetBrainsMono';
+
+	/* font-size */
+	--heading: 50px;
+	--body: 30px;
+	--caption: 20px;
+
+	/* colors */
 	--primary: #000000;
 	--secondary: #E3E3E3;
 	--highlight: #ADFF00;
+
+	/* lineheights */
+	--lineheight-big: 100px;
+	--lineheight-small: 40px;
+	--lineheight-medium: 20px;
 }
 
