@@ -18,23 +18,20 @@
 
 <style>
    .article-preview {
-      font-family: 'JetBrainsMono';
-      padding: 30px;
+
+      font-family: var(--main-font);
+      padding: 40px;
       text-align: center;
    }
 
    .article-preview__title {
-      font-size: 50px;
-      padding-bottom: 40px;   /* medium */
+      font-size: var(--heading);
+      padding-bottom: var(--lineheight-medium);   /* medium */
    }
 
    .article-preview__lead {
-      font-size: 20px;
-      padding-bottom: 20px; /* small */
+      font-size: var(--caption);
+      padding-bottom: var(--lineheight-small); /* small */
    }
 
-
-@media screen and (min-width: 768px) { /* minwidth fordi mobile first konsept */
-
-   }
 </style>
