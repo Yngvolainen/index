@@ -100,7 +100,7 @@ import Announcement from '../components/Announcement.vue';
 
     .header__icons img,
     .navigation__icons img {
-        width: 5px;
+        width: 22px;
     }
 
     .navigation {

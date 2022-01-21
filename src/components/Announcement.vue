@@ -27,6 +27,7 @@ export default {
         background: var(--highlight);
         width: 100%;
         height: 62px;
+        overflow: hidden;
     }
 
     .marquee__message {
@@ -40,8 +41,8 @@ export default {
     }
 
     @keyframes scrolling {
-        /* 0% { transform: translateX(100%); } */
-        /* 100% { transform: translateX(-10%); } */
+        /* 0% { transform: translateX(0); } */
+        /* 100% { transform: translateX(-100%); } */
     }
 
     .marquee__message li {
