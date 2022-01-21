@@ -1,5 +1,5 @@
 <template>
-   <ArticlePreview v-for="article in articles" :article="article"/>
+   <ArticlePreview v-for="(article, index) in articles" :article="article" :class="'preview-' + index" />
 
    <!-- article clickable -> route article.vue --> 
 </template>
@@ -19,9 +19,10 @@
       }
    }
 
-
 </script>
 
 <style>
-
+   .preview-0 {
+      color:red;
+   }
 </style>
