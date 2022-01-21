@@ -18,8 +18,9 @@
 
 <style>
    .article-preview {
+
       font-family: var(--main-font);
-      padding: 30px;
+      padding: 40px;
       text-align: center;
    }
 
@@ -32,20 +33,5 @@
       font-size: var(--caption);
       padding-bottom: var(--lineheight-small); /* small */
    }
-
-
-@media screen and (min-width: 768px) { /* minwidth fordi mobile first konsept */
-
-   .article-preview__0 {
-      
-   }
-   .article-preview__1 {
-      
-   }
-
-   .article-preview__2 {
-      
-   }
-}
 
 </style>
