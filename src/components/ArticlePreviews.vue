@@ -12,7 +12,7 @@
 </template>
 
 <script>
-   import ArticlePreview from '../components/ArticlePreview.vue';
+   import ArticlePreview from './ArticlePreview.vue';
 
    export default {
       components: {
