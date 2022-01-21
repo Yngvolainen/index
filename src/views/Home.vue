@@ -1,16 +1,29 @@
 <template>
-    <Articles />
+  <Header />
+  <!--Announcement /-->
+  <Articles />
+	<Journal />	
+  <About /> 
+  <Footer />
 </template>
 
 <script>
-    import Articles from '../components/Articles.vue';
+// import Announcement from '../components/Announcement.vue';
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
+import Journal from '../components/Journal.vue';
+import About from "../components/About.vue";
+import Articles from '../components/Articles.vue';
 
-    export default {
-        components: {
-            Articles
-        }
-    }
+export default {
+	components: {
+  Header,
+  // Announcement,
+  Articles
+  Journal,
+  About,
+  Footer
+	},
+}
+
 </script>
-
-<style>
-</style>
