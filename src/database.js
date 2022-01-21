@@ -15,12 +15,13 @@ export default {
 		
 			information: {
 				address: `172 Classon Avenue. Brooklyn, NY 11205. USA`,
+
 			},
 		
 			announcement: {
 				message: `OUT NOW! Issue #123 “Dialogues on Recursive Colonialisms, Speculative Computation, and the Techno-social”`
 			},
-		
+
 			articles: [
 				{
 					title: 'The Institute of the Cosmos',
@@ -143,7 +144,16 @@ export default {
 	getters: {
 		getJournal(state) {
 			return state.journal
+	},
+
+     getNavigationPages(state) {
+            return state.navigation;
+        },
+
+		announcement(state) {
+			return state.announcement;
 		}
 	}
 }
 	
+
