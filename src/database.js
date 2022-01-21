@@ -15,12 +15,13 @@ export default {
 		
 			information: {
 				address: `172 Classon Avenue. Brooklyn, NY 11205. USA`,
+
 			},
 		
 			announcement: {
 				message: `OUT NOW! Issue #123 “Dialogues on Recursive Colonialisms, Speculative Computation, and the Techno-social”`
 			},
-		
+
 			articles: [
 				{
 					title: 'The Institute of the Cosmos',
@@ -107,20 +108,20 @@ export default {
 					title: 'And My Flames Stay Till You Get Out My Way',
 					artist: 'April Bey',
 					location: 'Museum für Moderne Kunst',
-					image: 'journal_1.jpg'
+					image: '/images/journal_1.jpeg'
 				},
 				{
 					title: 'Crip Time',
 					artist: 'Kenny Fries',
 					location: 'Vienna Art Week',
-					image: 'journal_2.jpg'
+					image: '/images/journal_2.jpeg'
 				},
 				{
 					title: 'Losing Control',
 					artist: 'Alte Pinakothek',
 					location: 'Novuyo Moyo',
-					image: 'journal_3.jpg'
-				},
+					image: '/images/journal_3.jpeg'
+				}
 			],
 		
 			pages: [
@@ -140,11 +141,27 @@ export default {
 			]
 		}
 	}, 
-
+  
 	getters: {
-		getArticles(state) {
+		getJournal(state) {
+			return state.journal
+	},
+
+     getNavigationPages(state) {
+            return state.navigation;
+        },
+
+		announcement(state) {
+			return state.announcement;
+		},
+
+		getAbout(state) {
+			return state.pages;
+		},
+    
+    getArticles(state) {
 			return state.articles;
-		}
 	}
 }
 	
+
