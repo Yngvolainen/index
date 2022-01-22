@@ -1,9 +1,9 @@
 <template>
-    <div class="marquee">
-        <ul class="marquee__message">
-            <li class="marquee__message-list">{{getAnnouncement.message}}</li>
-        </ul>
-    </div>
+     <section class="marquee">
+        <div class="marquee__announcement">
+            <span>{{getAnnouncement.message}}</span>
+        </div>    
+    </section>
 </template>
 
 <script>
@@ -25,35 +25,45 @@ export default {
 <style>
     .marquee {
         background: var(--highlight);
+        position: relative; 
+        top: var(--heading);
+        right: 0;
+        left: 0;
         width: 100%;
         height: 62px;
         overflow: hidden;
     }
 
-    .marquee__message {
+    .marquee__announcement  {
         width: 100%;
-        height: 100%;
-        animation: scrolling 14s linear infinite;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-
-    @keyframes scrolling {
-        /* 0% { transform: translateX(0); } */
-        /* 100% { transform: translateX(-100%); } */
-    }
-
-    .marquee__message li {
         position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        /* font-size: 30px;    */
+        top: 5px;
+        right: 0;
+        left: 0;
+        white-space: nowrap;
+        padding: 0.35em;
+        animation: marquee 25s linear infinite;
     }
 
-    .marquee__message li:hover {
+    .marquee__announcement span {
+        font-size: var(--body);
+    }
+
+     @keyframes marquee {
+        0% {
+            transform: translateX(100%); 
+        }
+        100% { 
+            transform: translateX(-62%); 
+        }
+    }
+
+    .marquee__announcement-message:hover {
         animation-play-state: paused;
+    }
+
+    /* Medium screen devices (768px and above) */
+    @media screen and (min-width: 768px) {
+
     }
 </style>
