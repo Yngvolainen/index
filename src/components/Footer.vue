@@ -36,17 +36,31 @@ export default {
 
 <style>
 .footer {
-	padding: 30px;
+	/*padding: 30px;
 	display: flex;
 	justify-content: space-between;
 	font-size: 1.5rem;
-	font-family: 'JetBrainsMono';
+	font-family: 'JetBrainsMono'; */
+  display: grid;
+  height: 100px;
+  
+  grid-template-columns: repeat(12, 1fr);
+  grid-row: 1fr;
 }
 .footer__navigation {
 	margin-right: 50px;
 }
+
+.footer__navigation {
+	grid-start: span 10;
+	grid-end: span 11;
+}
 .footer__navigation-icon {
   width: 9px;
+}
+
+.footer__adress {
+	
 }
 
 .footer__navigation-link {
