@@ -47,7 +47,7 @@ export default {
       grid-column: 1/ span 12;
    }
 	.footer__title {
-		margin-right: 20px;
+		margin-left: 20px;
 	}
 
 .footer__navigation-icon {
