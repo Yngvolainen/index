@@ -36,17 +36,26 @@ export default {
 
 <style>
 .footer {
-	padding: 30px;
-	display: flex;
-	justify-content: space-between;
-	font-size: 1.5rem;
-	font-family: 'JetBrainsMono';
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  font-family: var(--main-font);
+  font-size: var(--caption);
+  padding-bottom: var(--lineheight-small);
 }
-.footer__navigation {
-	margin-right: 50px;
-}
+
+ .footer__title, .footer__adress, .footer__navigation {
+      grid-column: 1/ span 12;
+   }
+	.footer__title {
+		margin-right: 20px;
+	}
+
 .footer__navigation-icon {
   width: 9px;
+}
+
+.footer__adress {
+	
 }
 
 .footer__navigation-link {
@@ -57,14 +66,24 @@ export default {
 }
 
     @media screen and (min-width: 768px) {
-        .footer {
-            display: flex;
+        .footer__adress {
+       grid-column: 7 / span 2;
         }  
+
+		  .footer__navigation {
+		 grid-column: 10 / span 1;
+		  }
 		 
 	 }
     @media screen and (max-width: 768px) {
 	 .footer__adress {
         display: none;
+		  
 		  }
+		  .footer__navigation {
+		 grid-column: 10 / span 1;
+		  }
+
+
 	 }
 </style>
