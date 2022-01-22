@@ -54,6 +54,10 @@ export default {
   width: 9px;
 }
 
+.footer__adress {
+	
+}
+
 .footer__navigation-link {
 	margin-bottom: 20px;
 }
