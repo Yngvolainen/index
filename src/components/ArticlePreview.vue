@@ -24,7 +24,6 @@
 
 <style>
    .article-preview {
-      font-family: var(--main-font);
       padding: 40px;
       text-align: center;
    }
