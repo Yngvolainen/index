@@ -147,7 +147,7 @@ export default {
 			return state.journal
 	},
 
-     getNavigationPages(state) {
+     	getNavigationPages(state) {
             return state.navigation;
         },
 

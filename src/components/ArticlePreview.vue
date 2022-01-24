@@ -18,20 +18,17 @@
 
 <style>
    .article-preview {
-
-      font-family: var(--main-font);
       padding: 40px;
       text-align: center;
    }
 
    .article-preview__title {
       font-size: var(--heading);
-      padding-bottom: var(--lineheight-medium);   /* medium */
+      padding-bottom: var(--lineheight-small);   
    }
 
    .article-preview__lead {
       font-size: var(--caption);
-      padding-bottom: var(--lineheight-small); /* small */
+      padding-bottom: var(--lineheight-medium); 
    }
-
 </style>
