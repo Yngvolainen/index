@@ -22,7 +22,7 @@ export default {
 			return {
                 title: 'in(dex)',
                 about: 'About Us',
-					 adress: '172 Classon Avenue. Brooklyn, NY 11205. USA',
+					 adress: '172 Classon Avenue. Brooklyn, NY 11205.USA',
                 instagram: 'Instagram',
                 twitter: 'Twitter',
                 mail: 'in@dex.info',
@@ -42,7 +42,7 @@ export default {
   font-family: var(--main-font);
   padding-bottom: var(--lineheight-small);
   margin-left: var(--outside-margin);
-  font-size: var(--caption);
+  font-size: var(--body);
   color: var(--primary);
   margin-top: var(--lineheight-small);
   
@@ -71,11 +71,11 @@ export default {
 			 grid-column: 1 / span 1;
 		 }
         .footer__adress {
-       grid-column: 7 / span 2;
+       grid-column: 7 / span 3;
         }  
 
 		  .footer__navigation {
-		 grid-column: 10 / span 1;
+		 grid-column: 11 / span 1;
 		  }
 		 
 	 }
@@ -86,7 +86,7 @@ export default {
 		  
 		  }
 		  .footer__navigation {
-		 grid-column: 10 / span 1;
+		 grid-column: 11 / span 1;
 		  }
 
 
