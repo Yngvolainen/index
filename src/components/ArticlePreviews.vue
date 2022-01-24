@@ -60,7 +60,7 @@
       grid-column: 1/ span 12;
    }
 
-   @media screen and (min-width: 768px) { /* minwidth fordi mobile first konsept */
+   @media screen and (min-width: 768px) { 
     .article-previews__preview-0 {
       grid-column: 3/ span 8;
    }
@@ -73,5 +73,4 @@
       grid-column: 7/ span 6;
    }
 }
-
 </style>
