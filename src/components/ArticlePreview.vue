@@ -24,7 +24,6 @@
 
 <style>
    .article-preview {
-      padding: 40px;
       text-align: center;
    }
 
