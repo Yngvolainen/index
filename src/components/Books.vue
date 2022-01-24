@@ -29,7 +29,7 @@ export default {
 
 <style>
     .books__header {
-        font-size: 30px;
+        /* font-size: 30px; */
         text-align: center;
     }
 
