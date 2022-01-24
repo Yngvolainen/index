@@ -52,7 +52,6 @@ export default {
    grid-column: 1/ span 12;
 
    }
-	1
 	
 .footer__navigation-icon {
   width: 9px;
