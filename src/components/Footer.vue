@@ -1,18 +1,18 @@
 <template>
-<section class="footer">
+	<section class="footer">
 
-<h3 class="footer__title">{{title}}</h3>
+		<div class="footer__title">{{title}}</div>
 
-<div class="footer__adress">{{adress}}</div>
+		<div class="footer__adress">{{adress}}</div>
 
-<nav class="footer__navigation">
-	<div class="footer__navigation-link">{{about}}</div> 
-	<div class="footer__navigation-social">{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon" class="footer__navigation-icon"></div> 
-	<div class="footer__navigation-social">{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon" class="footer__navigation-icon"></div> 
-	<p class="footer__navigation-mail"> {{mail}} </p>
-</nav>
+		<nav class="footer__navigation">
+			<div class="footer__navigation-link">{{about}}</div> 
+			<div class="footer__navigation-social">{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon" class="footer__navigation-icon"></div> 
+			<div class="footer__navigation-social">{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon" class="footer__navigation-icon"></div> 
+			<p class="footer__navigation-mail"> {{mail}} </p>
+		</nav>
 
-</section>	
+	</section>	
 </template>
 
 
@@ -42,11 +42,14 @@ export default {
   font-family: var(--main-font);
   padding-bottom: var(--lineheight-small);
   margin-left: var(--outside-margin);
+  font-size: var(--caption);
+  color: var(--primary);
+  margin-top: var(--lineheight-small);
+  
 }
 
-
  .footer__title, .footer__adress, .footer__navigation {
-      grid-column: 1/ span 12;
+   grid-column: 1/ span 12;
 
    }
 	
@@ -64,6 +67,9 @@ export default {
 }
 
     @media screen and (min-width: 768px) {
+		 .footer__title {
+			 grid-column: 1 / span 1;
+		 }
         .footer__adress {
        grid-column: 7 / span 2;
         }  
@@ -74,13 +80,15 @@ export default {
 		 
 	 }
     @media screen and (max-width: 768px) {
-	 .footer__adress {
+		 
+	   .footer__adress {
         display: none;
 		  
 		  }
 		  .footer__navigation {
 		 grid-column: 10 / span 1;
 		  }
+
 
 
 	 }
