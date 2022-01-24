@@ -25,6 +25,7 @@
 <style>
    .article-preview {
       text-align: center;
+      padding-bottom: var(--lineheight-big);
    }
 
    .article-preview__title {
