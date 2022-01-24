@@ -42,7 +42,7 @@ export default {
   font-family: var(--main-font);
   padding-bottom: var(--lineheight-small);
   margin-left: var(--outside-margin);
-  font-size: var(--caption);
+  font-size: var(--body);
   color: var(--primary);
   margin-top: var(--lineheight-small);
   
