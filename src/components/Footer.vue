@@ -40,13 +40,14 @@ export default {
   grid-template-columns: repeat(12, 1fr);
   grid-gap:10px;
   font-family: var(--main-font);
-  font-size: var(--caption);
   padding-bottom: var(--lineheight-small);
   margin-left: var(--outside-margin);
 }
 
+
  .footer__title, .footer__adress, .footer__navigation {
       grid-column: 1/ span 12;
+
    }
 	
 
