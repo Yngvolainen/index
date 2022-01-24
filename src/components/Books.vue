@@ -4,23 +4,15 @@
             <h2>Books</h2>
         </header>
         <div class="books__items">
-            <section v-for="book in bookStore" :key="book.index">
-                <div>
-                    <img :src="book.cover" :alt="book.title">
-                </div>
-                <div>
-                    {{book.writers}}
-                </div>
-                <div>
-                    {{book.title}}
-                </div>
-            </section>
+            <BookItems />
         </div>
 
     </div>
 </template>
 
 <script>
+
+import BookItems from './BookItems.vue'
 
 export default {
     data() {
@@ -29,17 +21,15 @@ export default {
         }
     },
 
-    computed: {
-        bookStore() {
-            return this.$store.getters.getBooks;
-        }
-    },
+    components: {
+        BookItems
+        },
    }
 </script>
 
 <style>
     .books__header {
-        font-size: 30px;
+        /* font-size: 30px; */
         text-align: center;
     }
 
