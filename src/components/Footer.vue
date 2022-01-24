@@ -42,7 +42,7 @@ export default {
   font-family: var(--main-font);
   padding-bottom: var(--lineheight-small);
   margin-left: var(--outside-margin);
-  font-size: var(--body);
+  font-size: var(--caption);
   color: var(--primary);
   margin-top: var(--lineheight-small);
   
@@ -52,6 +52,7 @@ export default {
    grid-column: 1/ span 12;
 
    }
+	1
 	
 .footer__navigation-icon {
   width: 9px;
