@@ -52,6 +52,8 @@
       display: grid;
       grid-template-columns: repeat(12, 1fr) ;
       cursor: pointer;
+      gap: var(--column-gap);
+      padding: var(--outside-margin);
    }
 
    .article-previews__preview-0, 
