@@ -42,14 +42,13 @@ export default {
   font-family: var(--main-font);
   font-size: var(--caption);
   padding-bottom: var(--lineheight-small);
+  margin-left: var(--outside-margin);
 }
 
  .footer__title, .footer__adress, .footer__navigation {
       grid-column: 1/ span 12;
    }
-	.footer__title {
-		margin-left: 20px;
-	}
+	
 
 .footer__navigation-icon {
   width: 9px;
