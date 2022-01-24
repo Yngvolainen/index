@@ -61,7 +61,6 @@
    }
 
    @media screen and (min-width: 768px) { /* minwidth fordi mobile first konsept */
-
     .article-previews__preview-0 {
       grid-column: 3/ span 8;
    }
