@@ -88,7 +88,5 @@ export default {
 		 grid-column: 11 / span 1;
 		  }
 
-
-
 	 }
 </style>
