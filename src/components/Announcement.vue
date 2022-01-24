@@ -32,7 +32,7 @@ export default {
         width: 100%;
         height: 62px;
         overflow: hidden;
-        margin: 10px 0;
+        margin: var(--lineheight-small) 0 var(--lineheight-medium) 0 ;
     }
 
     .marquee__announcement  {

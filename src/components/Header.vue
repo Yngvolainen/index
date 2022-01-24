@@ -103,7 +103,7 @@ import Announcement from '../components/Announcement.vue';
     .navigation__icons {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content:right;
         align-items: flex-start;
         padding: 10px 0;
         gap: 5px;
@@ -157,7 +157,7 @@ import Announcement from '../components/Announcement.vue';
     }
 
     .navigation__menu--desktop li:nth-child(2) {
-        padding: var(--lineheight-medium) 0;
+        padding: var(--lineheight-small) 0;
     }
 
     /* Medium screen devices (768px and above) */
