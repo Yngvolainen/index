@@ -38,6 +38,7 @@ export default {
 .footer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-gap:10px;
   font-family: var(--main-font);
   font-size: var(--caption);
   padding-bottom: var(--lineheight-small);
