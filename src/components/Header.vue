@@ -86,7 +86,7 @@ import Announcement from '../components/Announcement.vue';
         top: 0;
         right: 0;
         left: 0;
-        padding: 10px;
+        padding-top: 10px;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         z-index: 400;
@@ -112,7 +112,7 @@ import Announcement from '../components/Announcement.vue';
 
     .header__icons img,
     .navigation__icons img {
-        width: 22px;
+        width: 32px;
     }
 
     .navigation {
@@ -120,7 +120,7 @@ import Announcement from '../components/Announcement.vue';
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         background: var(--secondary);
-        padding: 10px;
+        padding-top: 10px;
         font-family: var(--main-font);
         font-size: var(--body); 
         position: fixed;
