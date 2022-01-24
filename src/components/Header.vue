@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <Announcement />
+        <Announcement />            <!-- Announcement shows only in thwe top (not fixed) -->
     </header>
 
     <!-- Navigation shows when hamburger icon clicked -->
@@ -35,9 +35,13 @@
         </ul>
 
         <div class="navigation__icons" >
-            <img class="navigation__search-icon" src="/svg/search.svg" alt="search-icon">
+            <button>
+                <img class="navigation__search-icon" src="/svg/search.svg" alt="search-icon">
+            </button>
 
-            <button @click="toggleNavigation"><img src="/svg/hamburger.svg" alt="hamburger-icon"></button>          <!-- toggleNavigation is toggling the navigation section -->
+            <button @click="toggleNavigation">                          <!-- toggleNavigation is toggling the navigation section -->
+                <img src="/svg/hamburger.svg" alt="hamburger-icon">
+            </button>          
         </div>
     </nav> 
 </template>
@@ -78,47 +82,62 @@ import Announcement from '../components/Announcement.vue';
 <style>
     .header {
         width: 100%;
-        padding: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: var(--column-gap);
+        z-index: 400;
     }
 
     .header__logo,
     .navigation__logo {
-        font-size: 1.5rem;
+        font-size: var(--body);
         font-family: var(--main-font);
+        grid-column: 1/ span 3;
     }
 
     .header__icons, 
     .navigation__icons {
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        justify-content:right;
+        align-items: flex-start;
+        padding: 10px 0;
+        gap: 5px;
+        grid-column: 11/ span 2;
     }
 
     .header__icons img,
     .navigation__icons img {
-        width: 5px;
+        width: 32px;
     }
 
     .navigation {
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        background: #E3E3E3;
-        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: var(--column-gap);
+        background: var(--secondary);
+        padding-top: 10px;
         font-family: var(--main-font);
-        font-size: 25px; 
-        position: absolute;
+        font-size: var(--body); 
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 400;
+
     }
 
     .navigation__menu {
         text-align: center;
-        padding-top: 30px; 
+        padding-top: 50px; 
+        grid-column: 4/ span 6;
+
     }
 
     .navigation__menu li,
@@ -128,7 +147,7 @@ import Announcement from '../components/Announcement.vue';
 
     .navigation__menu li a {
         text-decoration: none;
-        color: #000000;
+        color: var(--primary);
     }
 
     .navigation__menu--desktop {
@@ -140,14 +159,20 @@ import Announcement from '../components/Announcement.vue';
     }
 
     .navigation__menu--desktop li:nth-child(2) {
-        padding: 20px 0;
+        padding: var(--lineheight-small) 0;
     }
 
     /* Medium screen devices (768px and above) */
     @media screen and (min-width: 768px) {
         .navigation__menu--desktop {
             display: block;
+            grid-column: 9/ span 2 ;
         }  
+
+        .header__icons, 
+        .navigation__icons {
+            grid-column: 12/ span 1;
+        }
 
         .header__icons img,
         .navigation__icons img {
@@ -155,8 +180,9 @@ import Announcement from '../components/Announcement.vue';
         }
         
         .navigation__menu {
-            text-align: left;
+            /* text-align: left; */
             padding-top: 0;  
+            grid-column: 6/ span 2;
         }
     }
 </style>
