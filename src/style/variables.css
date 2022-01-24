@@ -14,8 +14,9 @@
 	--lineheight-medium: 40px;
 	--lineheight-small: 20px;
 
-	/* gridgap */
+	/* gap */
 	--column-gap: 10px;
+	--outside-margin: 20px; 
 
 }
 
