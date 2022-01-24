@@ -1,7 +1,4 @@
 :root {
-	/* font */ 
-	--main-font: 'JetBrainsMono';
-
 	/* font-size */
 	--heading: 50px;
 	--body: 30px;
@@ -16,5 +13,10 @@
 	--lineheight-big: 100px;
 	--lineheight-medium: 40px;
 	--lineheight-small: 20px;
+
+	/* gap */
+	--column-gap: 10px;
+	--outside-margin: 20px; 
+	
 }
 

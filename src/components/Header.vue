@@ -89,6 +89,7 @@ import Announcement from '../components/Announcement.vue';
         padding-top: 10px;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        column-gap: var(--column-gap);
         z-index: 400;
     }
 
@@ -119,6 +120,7 @@ import Announcement from '../components/Announcement.vue';
         width: 100%;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        column-gap: var(--column-gap);
         background: var(--secondary);
         padding-top: 10px;
         font-family: var(--main-font);
