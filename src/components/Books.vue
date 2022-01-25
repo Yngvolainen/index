@@ -29,8 +29,8 @@ export default {
 
 <style>
     .books__header {
-        /* font-size: 30px; */
         text-align: center;
+        margin-bottom: var(--lineheight-medium);
     }
 
     .books__items {
@@ -39,6 +39,10 @@ export default {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 0.5em;
+    }
+
+    .books__items:last-of-type {
+        margin-bottom: var(--lineheight-big);
     }
 
     @media screen and (min-width: 769px) {
