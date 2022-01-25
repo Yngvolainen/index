@@ -66,10 +66,7 @@ export default {
         mouseOver() {
             this.hover = !this.hover
         }
-    },
-    // updated() {
-    //     console.log(this.journalIndex)
-    // }
+    }
 }
 </script>
 
