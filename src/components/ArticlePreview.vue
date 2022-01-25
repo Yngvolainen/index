@@ -1,5 +1,5 @@
 <template>
-   <div class="article-preview" @click="emitFullArticle">
+   <div class="article-preview" @click="emitFullArticle">   <!-- make article component clickable for navigtaion to full articles -->
       <h3 class="article-preview__title"> {{ article.title }}</h3>
       <p class="article-preview__lead"> {{ article.lead }}</p>
       <img class="article-preview__image" :src="article.preview.image"/> 
@@ -11,7 +11,7 @@
       props: {
          article: {
             type: Object
-         }
+         },
       }, 
 
       methods: {
@@ -30,7 +30,7 @@
 
    .article-preview__title {
       font-size: var(--heading);
-      padding-bottom: var(--lineheight-medium);  
+      padding-bottom: var(--lineheight-medium);
    }
 
    .article-preview__lead {

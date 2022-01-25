@@ -34,7 +34,7 @@ export default {
 						`We produced fifteen issues online, publishing over two hundred texts, essays, and visual pieces commissioned for the magazine; more than 50 percent of the contributors—unusually for Poland—were female. The fact that Obieg was bilingual meant that it had two distinct audiences: the Polish and Warsaw art scenes, and the wider international art world. We experimented with the language of art criticism, drawing on the legacy of the early Obieg of the 1980s and ’90s. Unusual for the era of clickbait, we rejected the fodder of mass appeal, ambitiously opting for themed issues and in-depth formats without a paywall to encourage access. We surfed on the stormy seas of theory, always in search of honest and accessible ways of writing about art and culture. We chose to forego commercial success and media hype for the sake of establishing and developing non-obvious, yet precious, connections.`,
 						`Despite our meagre budget, we managed to increase our fees for authors—regardless of their celebrity status or passport—as well as the fees for translators, guest editors, and all freelancers involved, to increase our reach and international community. Because of this, I believe, we were successful. After writing an essay for Obieg, someone from Lagos was granted a stipend in Johannesburg. Someone else came up with the idea of a biennial in northern Chile. New projects were conceived in Kyiv, Rijeka, Vilnius, and many other places. Channeled through Warsaw, people and ideas connected in fruitful collaboration.`,
 					],
-					author: 'Daniel Birnbaum',
+					author: 'Krzysztof Gutfranski',
 					preview: {
 						image: '/images/article_1.jpg',
 						caption: `Liz Craft, She is looking at me, 2015. Ceramic, aluminium, 84 x 82 x 12 cm.`
@@ -66,7 +66,7 @@ export default {
 						`Since World War II, societies have been shifting from systems of institutional enclosures that discipline citizens’ ways of being to systems of infinite and continuous modulating mechanisms, which generatively control access to institutions and human behavior.4 Digital technologies and the “internet of things” have enabled increasingly distributed logics, rationalities, and practices of governance via cybernetic systems of communication and predictive control. While sovereign, discipline, and control technologies of capture continue to exist in concert, it is increasingly control that becomes the dominant logic of systems of governance.`,
 						`Within this context of cybernetic systems of governance, control has become the guaranteed form of “truth.” That is, the assured path to “truth” is to shape the futurity of “truth” in the present. Thus, rather than try to prevent or deter the existence of what is empirically verifiable, cybernetic systems of control work via a play on temporality that manufactures a becoming-assemblage such as an event, organization, or body in the form of a threat, an anxiety, or desire to mold futurity in the present (or present futurity). In other words, regardless of whether a becoming-assemblage is empirically or objectively verifiable, a future event is constructed based on already existing predispositions or beliefs. The operative logic for such an environment of manufactured futurity is preemptive action.`,
 					],
-					author: 'Krzysztof Gutfranski',
+					author: 'Daniel Birnbaum',
 					preview: {
 						image: '/images/article_3.jpg',
 						caption: `Cover of Obieg 12: “The Speed of Guccifer.” The studio of TV UNU in the Romanian city of Râmnicu Vâlcea (a.k.a. Hackerville). Photo: Nicoleta Moise.`
@@ -164,14 +164,6 @@ export default {
     
    		getArticles(state) {
 			return state.articles;  
-		},
-
-		getFirstArticle(state) {
-			return state.articles[0];
-		},
-
-		getThirdArticle(state) {
-			return state.articles[2];
 		},
 
 		getBooks(state) {
