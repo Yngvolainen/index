@@ -1,11 +1,13 @@
 <template>
   <div class="about" v-for="about in pagesStore">
-     <h1 class="about__header"> {{ about.content.title }} </h1>
+     <div class="about__header"> {{ about.content.title }} </div>
      <div class="about__text"> 
 		  <p class="text__section"> {{ about.content.body[0] }} </p>
 		  <p class="text__section"> {{ about.content.body[1] }} </p>
 		  <p class="text__section"> {{ about.content.body[2] }} </p>
 		  <p class="text__section"> {{ about.content.body[3] }} </p>
+
+		 <!--  <div class="text__section" v-for="paragraph in pagesStore"> {{ paragraph.content.body }}</div> -->
 	  </div>
   </div>
 </template>
@@ -27,7 +29,6 @@
  
 <style> 
 	.about {
-		font-family: var(--main-font);
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: 10px;
@@ -39,14 +40,14 @@
 		grid-column: 1/ span 12;
 		text-align: center;
 		margin-top: 40px;
-		line-height: var(--lineheight-big);
+		/* line-height: var(--lineheight-medium); */
 	}
 
 	.about__text {
 		font-size: var(--body);
 		grid-column: 1/ span 12;
 		margin-top: 60px;
-		line-height: var(--lineheight-small);
+		/* line-height: var(--lineheight-medium); */
 	}
 
 	.text__section {
@@ -63,5 +64,4 @@
 			grid-column: 3/ span 8;
 		}
 	}
- 
 </style>
