@@ -38,7 +38,7 @@ export default {
         margin: 1em;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 0.5em;
+        grid-gap: var(--lineheight-xsmall);
     }
 
     .books__items:last-of-type {
