@@ -8,7 +8,9 @@
             <figcaption class="fullArticle__image-caption"> {{ articles[ArticleDataIndex].preview.caption }} </figcaption>
         </figure>
 
-        <p class="fullArticle__text"> {{ articles[ArticleDataIndex].body }} </p>
+        <div class="fullArticle__text">
+            <div class="fullArticle__paragraph" v-for="paragraph in articles[ArticleDataIndex].body"> {{ paragraph }} </div>
+        </div>
     </section>
 </template>
 
@@ -20,7 +22,7 @@
             },
 
             ArticleDataIndex() {
-                return this.$route.params.article_id === 'the-institute-of-the-cosmos' ? 0 : 2 /* return articledata based the article that was clicked in home.vue */
+                return this.$route.params.article_id === 'the-institute-of-the-cosmos' ? 0 : 2 /* return articleIndex based the article that was clicked in home.vue to show correct article data*/
             }
         }
     }
@@ -62,7 +64,12 @@
     .fullArticle__text {
         grid-column: 3 / span 8;
         font-size: var(--body);
+        margin-bottom: var(--lineheight-big);
         padding-left: var(--outside-margin);
         padding-right: var(--outside-margin);
+    }
+
+    .fullArticle__paragraph {
+        padding-bottom: var(--lineheight-medium);
     }
 </style>
