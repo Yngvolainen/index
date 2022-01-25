@@ -1,20 +1,20 @@
 <template>
-      <div class="article-previews">
-         <ArticlePreview 
+      <div class="articlesHomepage">
+         <ArticleSmall 
                         v-for="(article, index) in articles" 
                         :article="article"
-                        :class="'article-previews__preview-' + index" 
+                        :class="'articlesHomepage__article-' + index" 
                         @fullArticle="seeFullArticle" 
                         />
       </div>
 </template>
 
 <script>
-   import ArticlePreview from './ArticlePreview.vue';
+   import ArticleSmall from './ArticleSmall.vue';
 
    export default {
       components: {
-         ArticlePreview
+         ArticleSmall
       },
 
       computed: {
@@ -38,7 +38,7 @@
 </script>
 
 <style>
-   .article-previews {
+   .articlesHomepage {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       cursor: pointer;
@@ -46,22 +46,22 @@
       padding: var(--outside-margin);
    }
 
-   .article-previews__preview-0, 
-   .article-previews__preview-1, 
-   .article-previews__preview-2 {
+   .articlesHomepage__article-0, 
+   .articlesHomepage__article-1, 
+   .articlesHomepage__article-2 {
       grid-column: 1/ span 12;
    }
 
    @media screen and (min-width: 768px) { 
-    .article-previews__preview-0 {
+    .articlesHomepage__article-0 {
       grid-column: 3/ span 8;
    }
 
-   .article-previews__preview-1 {
+   .articlesHomepage__article-1 {
       grid-column: 1/ span 6;
    }
 
-   .article-previews__preview-2 {
+   .articlesHomepage__article-2 {
       grid-column: 7/ span 6;
    }
 }

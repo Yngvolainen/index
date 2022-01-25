@@ -1,8 +1,8 @@
 <template>
-   <div class="article-preview" @click="emitFullArticle">   <!-- make article component clickable for navigtaion to full articles -->
-      <h3 class="article-preview__title"> {{ article.title }}</h3>
-      <p class="article-preview__lead"> {{ article.lead }}</p>
-      <img class="article-preview__image" :src="article.preview.image"/> 
+   <div class="articleSmall" @click="emitFullArticle">   <!-- make article component clickable for navigtaion to full articles -->
+      <h3 class="articleSmall__title"> {{ article.title }}</h3>
+      <p class="articleSmall__lead"> {{ article.lead }}</p>
+      <img class="articleSmall__image" :src="article.preview.image"/> 
    </div>
 </template>
 
@@ -23,17 +23,17 @@
 </script>
 
 <style>
-   .article-preview {
+   .articleSmall {
       text-align: center;
       padding-bottom: var(--lineheight-big);
    }
 
-   .article-preview__title {
+   .articleSmall__title {
       font-size: var(--heading);
       padding-bottom: var(--lineheight-medium);
    }
 
-   .article-preview__lead {
+   .articleSmall__lead {
       font-size: var(--caption);
       padding-bottom: var(--lineheight-small); 
    }
