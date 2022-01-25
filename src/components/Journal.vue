@@ -76,6 +76,7 @@ export default {
 <style>
     .journal {
         text-align: center;
+        margin-bottom: var(--lineheight-big);
     }
 
     .journal__header {
@@ -144,26 +145,26 @@ export default {
     }
 
     @media screen and (min-width: 769px) {
-    .journal__slideshow div {
-        visibility: hidden;
-    }
+        .journal__slideshow div {
+            visibility: hidden;
+        }
 
-    .journal__slideshow-overlay {
-        opacity: 0;
-    }
+        .journal__slideshow-overlay {
+            opacity: 0;
+        }
 
-    .journal__slideshow-overlay:hover {
-        opacity: 0.2;
-    }
+        .journal__slideshow-overlay:hover {
+            opacity: 0.2;
+        }
 
-    .journal__slideshow-text {
-        visibility: hidden;
-        transition: .5s ease;
-    }
+        .journal__slideshow-text {
+            visibility: hidden;
+            transition: .5s ease;
+        }
 
-    .journal__slideshow-text:hover {
-        background: rgba(0, 0, 0, 0.2);
-        transition: .5s ease;
+        .journal__slideshow-text:hover {
+            background: rgba(0, 0, 0, 0.2);
+            transition: .5s ease;
+        }
     }
-}
 </style>
