@@ -6,12 +6,10 @@
 		<div class="footer__adress">{{adress}}</div>
 
 		<nav class="footer__navigation">
-			<RouterLink>
 			<div class="footer__navigation-link">{{about}}</div> 
 			<div class="footer__navigation-social">{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon" class="footer__navigation-icon"></div> 
 			<div class="footer__navigation-social">{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon" class="footer__navigation-icon"></div> 
 			<p class="footer__navigation-mail"> {{mail}} </p>
-			</RouterLink>
 		</nav>
 
 	</section>	
@@ -24,7 +22,7 @@ export default {
 			return {
                 title: 'in(dex)',
                 about: 'About Us',
-					 adress: '172 Classon Avenue. Brooklyn, NY 11205.USA',
+					 adress: '172 Classon Avenue. Brooklyn, NY 11205. USA',
                 instagram: 'Instagram',
                 twitter: 'Twitter',
                 mail: 'in@dex.info',
@@ -50,11 +48,13 @@ export default {
   
 }
 
+
  .footer__title, .footer__adress, .footer__navigation {
    grid-column: 1/ span 12;
 
    }
 	
+
 .footer__navigation-icon {
   width: 9px;
 }
@@ -72,11 +72,11 @@ export default {
 			 grid-column: 1 / span 1;
 		 }
         .footer__adress {
-       grid-column: 7 / span 3;
+       grid-column: 7 / span 2;
         }  
 
 		  .footer__navigation {
-		 grid-column: 11 / span 1;
+		 grid-column: 10 / span 1;
 		  }
 		 
 	 }
@@ -87,8 +87,10 @@ export default {
 		  
 		  }
 		  .footer__navigation {
-		 grid-column: 11 / span 1;
+		 grid-column: 10 / span 1;
 		  }
+
+
 
 	 }
 </style>
