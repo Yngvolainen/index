@@ -1,6 +1,6 @@
 <template>
     <Header />
-    <!--Announcement /-->
+    <Announcement />
     <Articles />
     <Books />
     <Journal />	 
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    // import Announcement from '../components/Announcement.vue';
+    import Announcement from '../components/Announcement.vue';
     import Header from '../components/Header.vue';
     import Footer from '../components/Footer.vue';
     import Books from '../components/Books.vue';
@@ -18,7 +18,7 @@
     export default {
         components: {
         Header,
-        // Announcement,
+        Announcement,
         Articles,
         Books,
         Journal,
