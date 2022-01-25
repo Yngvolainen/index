@@ -1,6 +1,6 @@
 <template>
-    <FirstArticle v-if="$route.params.article_id === 'firstArticle'" />
-    <ThirdtArticle v-if="$route.params.article_id === 'thirdArticle'" />
+    <FirstArticle v-if="$route.params.article_id === 'the-institute-of-the-cosmos'" />
+    <ThirdArticle v-if="$route.params.article_id === 'mutual-aid-social-distancing-and-dual-power-in-the-state-of-emergency'" />
 </template>
 
 <script>
