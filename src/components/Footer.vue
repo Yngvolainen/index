@@ -42,11 +42,12 @@ export default {
   font-family: var(--main-font);
   padding-bottom: var(--lineheight-small);
   margin-left: var(--outside-margin);
-  font-size: var(--caption);
+  font-size: var(--body);
   color: var(--primary);
   margin-top: var(--lineheight-small);
   
 }
+
 
  .footer__title, .footer__adress, .footer__navigation {
    grid-column: 1/ span 12;
