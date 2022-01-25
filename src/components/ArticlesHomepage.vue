@@ -1,20 +1,19 @@
 <template>
-      <div class="articlesHomepage">
-         <ArticleSmall 
-                        v-for="(article, index) in articles" 
-                        :article="article"
-                        :class="'articlesHomepage__article-' + index" 
-                        @fullArticle="seeFullArticle" 
-                        />
-      </div>
+   <div class="articlesHomepage">
+      <Article v-for="(article, index) in articles" 
+                     :article="article"
+                     :index="index"
+                     @fullArticle="seeFullArticle" 
+                     />
+   </div>
 </template>
 
 <script>
-   import ArticleSmall from './ArticleSmall.vue';
+   import Article from './Article.vue';
 
    export default {
       components: {
-         ArticleSmall
+         Article
       },
 
       computed: {
@@ -41,28 +40,7 @@
    .articlesHomepage {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      cursor: pointer;
       gap: var(--column-gap);
       padding: var(--outside-margin);
    }
-
-   .articlesHomepage__article-0, 
-   .articlesHomepage__article-1, 
-   .articlesHomepage__article-2 {
-      grid-column: 1/ span 12;
-   }
-
-   @media screen and (min-width: 768px) { 
-    .articlesHomepage__article-0 {
-      grid-column: 3/ span 8;
-   }
-
-   .articlesHomepage__article-1 {
-      grid-column: 1/ span 6;
-   }
-
-   .articlesHomepage__article-2 {
-      grid-column: 7/ span 6;
-   }
-}
 </style>
