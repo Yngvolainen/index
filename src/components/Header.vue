@@ -1,49 +1,38 @@
 <template>
-    <header v-if="!isNavigationVisible">  <!-- When isNavigationVisible === false header will be disappear -->
-        <div class="header">       
+    <section> 
+        <!-- navigationVisible class shows only when the hamburger menu clicked -->
+        <header class="header" v-bind:class="{navigationVisible: !isNavigationVisible}">       
             <div class="header__logo">{{ title }}</div>
 
+            <nav class="header__navigation">
+                <ul class="header__navigation-menu">
+                    <li v-for="page in navigationPages" :key="page.id">
+                        <a href="">{{ page.title }}</a>
+                    </li>
+                </ul>
+
+                <ul class="header__navigation-menu--desktop">
+                    <li>{{ about }}</li>
+
+                    <li>
+                        <div>{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
+                        <div>{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
+                    </li>
+
+                    <li>{{ info }}</li>
+                </ul>
+            </nav>
+
             <div class="header__icons">
-                <img class="header__search-icon" src="/svg/search.svg" alt="search-icon">
+                <button class="header__icons-search"><img src="/svg/search.svg" alt="search-icon"></button>
 
-                <button @click="toggleNavigation"><img src="/svg/hamburger.svg" alt="hamburger-icon"></button>
+                <!-- toggleNavigation toggling the class name -->
+                <button class="header__icons-hamburger" @click="toggleNavigation"><img src="/svg/hamburger.svg" alt="hamburger-icon"></button>
             </div>
-        </div>
-
-        <Announcement />            <!-- Announcement shows only in thwe top (not fixed) -->
-    </header>
-
-    <!-- Navigation shows when hamburger icon clicked -->
-    <nav v-if="isNavigationVisible === true" class="navigation">
-        <div class="navigation__logo">{{ title }}</div>
-
-        <ul class="navigation__menu">
-            <li v-for="page in navigationPages" :key="page.id">
-                <a href="">{{ page.title }}</a>
-            </li>
-        </ul>
-
-        <ul class="navigation__menu--desktop">
-            <li>{{ about }}</li>
-
-            <li>
-                <div>{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
-                <div>{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
-            </li>
-
-            <li>{{ info }}</li>
-        </ul>
-
-        <div class="navigation__icons" >
-            <button>
-                <img class="navigation__search-icon" src="/svg/search.svg" alt="search-icon">
-            </button>
-
-            <button @click="toggleNavigation">                          <!-- toggleNavigation is toggling the navigation section -->
-                <img src="/svg/hamburger.svg" alt="hamburger-icon">
-            </button>          
-        </div>
-    </nav> 
+        </header>
+    </section>
+    <!-- Announcement shows only in the top (not fixed) -->
+    <!-- <Announcement />   -->
 </template>
 
 <script>
@@ -60,7 +49,7 @@ import Announcement from '../components/Announcement.vue';
                 instagram: 'Instagram',
                 twitter: 'Twitter',
                 info: 'in@dex.info',
-				isNavigationVisible: false,
+				isNavigationVisible: true,
 			};
 		},
 
@@ -73,7 +62,7 @@ import Announcement from '../components/Announcement.vue';
 		methods: {
 			toggleNavigation() {
 				this.isNavigationVisible = !this.isNavigationVisible;
-			},
+			}
 		},
 	};
 </script>
@@ -84,89 +73,90 @@ import Announcement from '../components/Announcement.vue';
         width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
         left: 0;
-        padding-top: 10px;
+        right: 0;
+        padding: var(--lineheight-xsmall) 0;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         column-gap: var(--column-gap);
-        z-index: 400;
+        z-index: 10;
+        transition: all .15s cubic-bezier(.23,1,.32,1);
     }
 
-    .header__logo,
-    .navigation__logo {
+    .header__logo {
         font-size: var(--body);
         font-family: var(--main-font);
-        grid-column: 1/ span 3;
+        grid-column: 1/ span 2;
+        margin-left: var(--lineheight-small);
     }
 
-    .header__icons, 
-    .navigation__icons {
+    .header__icons {
         display: flex;
         flex-direction: row;
-        justify-content:right;
+        justify-content: center;
         align-items: flex-start;
-        padding: 10px 0;
-        gap: 5px;
-        grid-column: 11/ span 2;
+        gap: var(--column-gap);
+        grid-column: 10/ span 3;
+        margin-right: var(--lineheight-small);
     }
 
-    .header__icons img,
-    .navigation__icons img {
+    .header__icons button img {
         width: 32px;
     }
 
-    .navigation {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: var(--column-gap);
-        background: var(--secondary);
-        padding-top: 10px;
-        font-family: var(--main-font);
-        font-size: var(--body); 
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 400;
-
-    }
-
-    .navigation__menu {
-        text-align: center;
-        padding-top: 50px; 
+    .header__navigation {
+        font-size: var(--body);
+        font-family: var(--main-font);  
         grid-column: 4/ span 6;
-
+        /* background: var(--secondary); */
+        transform: translateY(-120%);
+        transition: all .3s cubic-bezier(.23,1,.32,1);
+        z-index: 15;
+        overflow: hidden;
+        margin-top: var(--lineheight-medium);
     }
 
-    .navigation__menu li,
-    .navigation__menu--desktop li {
-        list-style: none;
+    .header__navigation-menu {
+        text-align: center;   
     }
 
-    .navigation__menu li a {
+    .header__navigation-menu li,
+    .header__navigation-menu--desktop li {
+        list-style: none;   
+    }
+
+    .header__navigation-menu li a,
+    .header__navigation-menu--desktop a {
         text-decoration: none;
         color: var(--primary);
     }
 
-    .navigation__menu--desktop {
+    .header__navigation-menu--desktop {
         display: none;
     }
 
-    .navigation__menu--desktop li div img {
+    .header__navigation-menu--desktop li div img {
         width: 9px;
     }
 
-    .navigation__menu--desktop li:nth-child(2) {
+    .header__navigation-menu--desktop li:nth-child(2) {
         padding: var(--lineheight-small) 0;
     }
 
-    /* Medium screen devices (768px and above) */
-    @media screen and (min-width: 768px) {
-        .navigation__menu--desktop {
+    /* When navigation is visible navigationVisible class applies */
+    .navigationVisible{
+        background: var(--secondary);
+    }
+ 
+    .navigationVisible .header__navigation{
+        transform: translateY(0);
+    }
+
+    
+    /* Medium screen devices (968px and above) */
+    @media screen and (min-width: 968px) {
+        .header__navigation-menu--desktop {
             display: block;
-            grid-column: 9/ span 2 ;
         }  
 
         .header__icons, 
@@ -179,10 +169,18 @@ import Announcement from '../components/Announcement.vue';
             width: 32px;
         }
         
-        .navigation__menu {
-            /* text-align: left; */
-            padding-top: 0;  
-            grid-column: 6/ span 2;
+        .header__navigation{ 
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: var(--column-gap);
+            grid-column: 6/ span 6;
+            transform: translateY(-110%);
+            transition: all .3s cubic-bezier(.23,1,.32,1);
+            margin-top: 0; 
+        }
+
+        .header__navigation .header__navigation-menu {
+            text-align: left; 
         }
     }
 </style>
