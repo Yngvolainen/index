@@ -93,14 +93,18 @@ import Announcement from '../components/Announcement.vue';
         flex-direction: row;
         justify-content: right;
         align-items: flex-start;
-        gap: var(--gap-small);
+        gap: var(--gap-big);
         grid-column: 11/ span 2;
         margin-right: var(--bottom-small);
         padding-top: var(--bottom-xsmall);
     }
 
-    .header__icons button img {
+    .header__icons-search {
         width: 22px;
+    }
+
+    .header__icons-hamburger {
+        width: 30px;
     }
 
     .header__navigation {
