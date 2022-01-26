@@ -1,8 +1,10 @@
 <template>
     <section>
         <!-- navigationVisible class shows only when the hamburger menu clicked -->
-        <header class="header" v-bind:class="{navigationVisible: !isNavigationVisible}">       
-            <div class="header__logo">{{ title }}</div>
+        <header class="header" v-bind:class="{navigationVisible: !isNavigationVisible}"> 
+            <RouterLink class="header__navigation-link" :to="{ name: 'home', path: '/', component: Home}">      
+                <div class="header__logo">{{ title }}</div>
+            </RouterLink>
 
             <nav class="header__navigation">
                 <ul class="header__navigation-menu">
@@ -10,17 +12,19 @@
                         <a href="">{{ page.title }}</a>
                     </li>
                 </ul>
+			
+                <RouterLink class="header__navigation-link" :to="{ name: 'about', path: '/about-us', component: AboutView }">
+                    <ul class="header__navigation-menu--desktop">
+                        <li>{{ about }}</li>
 
-                <ul class="header__navigation-menu--desktop">
-                    <li>{{ about }}</li>
+                        <li>
+                            <div>{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
+                            <div>{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
+                        </li>
 
-                    <li>
-                        <div>{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
-                        <div>{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
-                    </li>
-
-                    <li>{{ info }}</li>
-                </ul>
+                        <li>{{ info }}</li>
+                    </ul>
+                </RouterLink>
             </nav>
 
             <div class="header__icons">
@@ -127,7 +131,8 @@ import Announcement from '../components/Announcement.vue';
     .header__navigation-menu--desktop li {
         list-style: none;   
     }
-
+    
+    .header__navigation-link,
     .header__navigation-menu li a,
     .header__navigation-menu--desktop a {
         text-decoration: none;
