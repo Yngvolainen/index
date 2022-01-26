@@ -74,7 +74,7 @@
       grid-column: span 12;
    }
 
-   @media screen and (min-width: 968px) {    /* desktop */
+   @media screen and (min-width: 968px) {   
        .article__0 {
          grid-column: 3 / span 8;
       }
