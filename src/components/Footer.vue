@@ -39,10 +39,10 @@ export default {
 <style>
 .footer {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap:10px;
+  grid-template-columns: var(--grid-column-12);
+  grid-gap: var(--gap-big);
   font-family: var(--main-font);
-  padding-bottom: var(--lineheight-small);
+  padding-bottom: var(--bottom-small);
   margin-left: var(--outside-margin);
   font-size: var(--body);
   color: var(--primary);
