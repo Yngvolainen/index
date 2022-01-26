@@ -51,7 +51,7 @@
     }
 
     .fullArticle__preview {
-        grid-column: span 13;
+        grid-column: span 12;
         padding-top: var(--lineheight-medium);
         padding-bottom: var(--lineheight-big);
     }
