@@ -53,7 +53,7 @@ export default {
 					author: '',
 					preview: {
 						image: '/images/article_2.jpg',
-						caption: ''
+						caption: 'caption!'
 					}
 				},
 				{
@@ -77,7 +77,7 @@ export default {
 			books: [
 				{
 					title: 'Radicalizing Care',
-					writers: 'Birgit Bosold, Lena Fritsch, Vera Hofmann, Elke Krasny, Sophie Lingg',
+					writers: 'BIRGIT BOSOLD, LENA FRITSCH, VERA HOFMANN, ELKE KRASNY, SOPHIE LINGG',
 					cover: '/images/book_1.png'
 				},
 				{	
