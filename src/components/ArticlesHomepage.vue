@@ -1,10 +1,12 @@
 <template>
    <div class="articlesHomepage">
-      <Article v-for="(article, index) in articles" 
-                     :article="article"
-                     :index="index"
-                     @fullArticle="seeFullArticle" 
-                     />
+         <div v-for="(article, index) in articles" class="article">
+            <router-link :to="{ name: 'article', params: {article_slug: article.slug }}" class="'article-' + index">
+               <h3 class="article__title"> {{ article.title }}</h3>
+               <p class="article__lead"> {{ article.lead }}</p>
+               <img class="article__image" :src="article.preview.image"/>
+            </router-link>
+      </div> 
    </div>
 </template>
 
