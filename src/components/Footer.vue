@@ -46,7 +46,7 @@ export default {
   margin-left: var(--outside-margin);
   font-size: var(--body);
   color: var(--primary);
-  margin-top: var(--lineheight-small);
+  
   
 }
 
