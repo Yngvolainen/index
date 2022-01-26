@@ -3,10 +3,10 @@
         <div class="books__images">
             <img :src="book.cover" :alt="book.title">
         </div>
-        <div>
+        <div class="books__text">
             {{book.writers}}
         </div>
-        <div>
+        <div class="books__text">
             {{book.title}}
         </div>
     </section>
@@ -32,6 +32,10 @@ export default {
 <style>
     .books__images {
         margin-bottom: 10px;
+    }
+
+    .books__text {
+        font-size: var(--caption);
     }
 
 </style>

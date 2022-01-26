@@ -28,21 +28,25 @@ export default {
 </script>
 
 <style>
+    /* .books {
+        display: grid;
+        grid-template-columns: var(--grid-column-12);
+    } */
+
     .books__header {
         text-align: center;
-        margin-bottom: var(--lineheight-medium);
+        margin-bottom: var(--bottom-medium);
     }
 
     .books__items {
-        font-size: 12px;
         margin: 1em;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: var(--lineheight-xsmall);
+        grid-gap: var(--gap-big);
     }
 
     .books__items:last-of-type {
-        margin-bottom: var(--lineheight-big);
+        margin-bottom: var(--bottom-big);
     }
 
     @media screen and (min-width: 968px) {
