@@ -22,7 +22,9 @@
             },
 
             ArticleDataIndex() {
-                return this.$route.params.article_id === 'the-institute-of-the-cosmos' ? 0 : 2 /* return articleIndex based the article that was clicked in home.vue to show correct article data*/
+                if (this.$route.params.article_slug === 'the-institute-of-the-cosmos') {return 0}
+                if (this.$route.params.article_slug === 'jimmie-durham') {return 1}
+                if (this.$route.params.article_slug === 'mutual-aid-social-distancing-and-dual-power-in-the-state-of-emergency') {return 2}            
             }
         }
     }
@@ -38,7 +40,7 @@
     .fullArticle__author {
         grid-column: 2 /span 4;
         font-size: var(--body);
-        padding-top: var(--lineheight-medium);
+        padding-top: var(--bottom-medium);
         padding-left: var(--outside-margin);
         padding-right: var(--outside-margin);
     }
@@ -48,28 +50,30 @@
         font-size: var(--heading);
         padding-left: var(--outside-margin);
         padding-right: var(--outside-margin);
+        margin-bottom: var(--bottom-medium);
     }
 
     .fullArticle__preview {
-        grid-column: span 13;
+        grid-column: span 12;
         padding-top: var(--lineheight-medium);
         padding-bottom: var(--lineheight-big);
     }
 
     .fullArticle__image-caption {
         font-size: var(--caption);
-        padding: var(--lineheight-xsmall);
+        padding: var(--bottom-xsmall);
+        margin-bottom: var(--bottom-big);
     }
 
     .fullArticle__text {
         grid-column: 3 / span 8;
         font-size: var(--body);
-        margin-bottom: var(--lineheight-big);
+        margin-bottom: var(--bottom-big);
         padding-left: var(--outside-margin);
         padding-right: var(--outside-margin);
     }
 
     .fullArticle__paragraph {
-        padding-bottom: var(--lineheight-medium);
+        padding-bottom: var(--bottom-medium);
     }
 </style>

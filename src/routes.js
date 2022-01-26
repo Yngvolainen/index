@@ -4,7 +4,7 @@ import AboutView from './views/AboutView.vue';
 
 export default [
 	{ name: 'home', path: '/', component: Home },
-	{ name: 'article', path: '/:article_id', component: FullArticleView },
+	{ name: 'article', path: '/:article_slug', component: FullArticleView },
 	{ name: 'about', 		path: '/about-us', 		component: AboutView },
 ];
 
