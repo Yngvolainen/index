@@ -79,7 +79,6 @@
          grid-column: 3 / span 8;
       }
        
-
       .article__lead-0 {
          grid-column: 4 / span 6;   
 
