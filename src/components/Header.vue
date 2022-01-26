@@ -87,16 +87,16 @@ import Announcement from '../components/Announcement.vue';
         font-size: var(--body);
         font-family: var(--main-font);
         grid-column: 1/ span 2;
-        margin-left: var(--lineheight-small);
+        margin-left: var(--lineheight-xsmall);
     }
 
     .header__icons {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: right;
         align-items: flex-start;
-        gap: var(--column-gap);
-        grid-column: 10/ span 3;
+        gap: 5px;
+        grid-column: 11/ span 2;
         margin-right: var(--lineheight-small);
     }
 
