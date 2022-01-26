@@ -80,7 +80,7 @@ import Announcement from '../components/Announcement.vue';
         display: grid;
         grid-template-columns: var(--grid-column-12);
         column-gap: var(--gap-big);
-        margin: var(--bottom-xsmall) 0;
+        margin-bottom: var(--bottom-xsmall);
         transition: all .15s cubic-bezier(.23,1,.32,1);
         overflow: hidden;
     }
@@ -98,8 +98,8 @@ import Announcement from '../components/Announcement.vue';
         justify-content: right;
         align-items: flex-start;
         gap: var(--gap-big);
-        grid-column: 11/ span 2;
-        margin-right: var(--bottom-small);
+        grid-column: 10/ span 3;
+        margin-right: var(--bottom-xsmall);
         padding-top: var(--bottom-xsmall);
     }
 
@@ -117,7 +117,7 @@ import Announcement from '../components/Announcement.vue';
         transition: all .3s cubic-bezier(.23,1,.32,1);
         font-size: var(--body);
         font-family: var(--main-font);  
-        grid-column: 4/ span 7;
+        grid-column: 2/ span 7;
         margin-top: var(--bottom-medium);
         z-index: 15;
         overflow: hidden; 
@@ -131,7 +131,7 @@ import Announcement from '../components/Announcement.vue';
     .header__navigation-menu--desktop li {
         list-style: none;   
     }
-    
+
     .header__navigation-link,
     .header__navigation-menu li a,
     .header__navigation-menu--desktop a {
