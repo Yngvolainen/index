@@ -73,11 +73,11 @@ export default {
 <style>
     .journal {
         text-align: center;
-        margin-bottom: var(--lineheight-big);
+        margin-bottom: var(--bottom-big);
     }
 
     .journal__header {
-        margin-bottom: var(--lineheight-medium);
+        margin-bottom: var(--bottom-medium);
     }
 
     .journal__slideshow {
@@ -96,10 +96,7 @@ export default {
         background: black;
         opacity: 0.2;
         transition: .5s ease;
-        /* z-index: 999; */
     }
-
- 
 
     .journal__slideshow:hover div {
         visibility: visible;
