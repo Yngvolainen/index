@@ -21,7 +21,7 @@
 </script>
 
 <style>
-   .article {
+/*    .article {
       text-align: center;
       margin-bottom: var(--lineheight-big);  
       grid-column: span 12;
@@ -41,7 +41,7 @@
 
    .article__image {
       grid-column: span 12;
-   }
+   } */
 
 
    @media screen and (min-width: 968px) {    /* desktop */
