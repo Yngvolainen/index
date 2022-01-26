@@ -1,19 +1,29 @@
-<template>
-  <div class="about" v-for="about in pagesStore">
-     <div class="about__header"> {{ about.content.title }} </div>
-     <div class="about__text"> 
-		  <p class="text__section"> {{ about.content.body[0] }} </p>
-		  <p class="text__section"> {{ about.content.body[1] }} </p>
-		  <p class="text__section"> {{ about.content.body[2] }} </p>
-		  <p class="text__section"> {{ about.content.body[3] }} </p>
+<template> 
+	<div> <Header /> </div>
+		<div class="about" v-for="about in pagesStore">
+			<div class="about__header"> {{ about.content.title }} </div>
+			<div class="about__text"> 
+				<p class="text__section"> {{ about.content.body[0] }} </p>
+				<p class="text__section"> {{ about.content.body[1] }} </p>
+				<p class="text__section"> {{ about.content.body[2] }} </p>
+				<p class="text__section"> {{ about.content.body[3] }} </p>
 
-		 <!--  <div class="text__section" v-for="paragraph in pagesStore"> {{ paragraph.content.body }}</div> -->
-	  </div>
-  </div>
+				<!--  <div class="text__section" v-for="paragraph in pagesStore"> {{ paragraph.content.body }}</div> -->
+			</div>
+		</div>
+	<div> <Footer /> </div>
 </template>
  
 <script>
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
+
 	export default {
+		components: {
+			Header,
+			Footer
+		},
+
 		data() {
 			return {
 			}
@@ -26,7 +36,7 @@
 		},
 	};
 </script>
- 
+
 <style> 
 	.about {
 		display: grid;
