@@ -53,7 +53,7 @@ export default {
 					author: '',
 					preview: {
 						image: '/images/article_2.jpg',
-						caption: 'caption!'
+						caption: ''
 					}
 				},
 				{
