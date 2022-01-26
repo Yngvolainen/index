@@ -65,7 +65,7 @@ import Footer from '../components/Footer.vue';
 	}
 
 	/* medium screen and larger */
-	@media screen and (min-width: 769px)  {
+	@media screen and (min-width: 968px)  {
 		.about__header {
 			grid-column: 3/ span 8;
 		}
