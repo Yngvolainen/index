@@ -1,8 +1,10 @@
 <template>
-    <section> 
+    <section>
         <!-- navigationVisible class shows only when the hamburger menu clicked -->
-        <header class="header" v-bind:class="{navigationVisible: !isNavigationVisible}">       
-            <div class="header__logo">{{ title }}</div>
+        <header class="header" v-bind:class="{navigationVisible: !isNavigationVisible}"> 
+            <RouterLink class="header__navigation-link" :to="{ name: 'home', path: '/', component: Home}">      
+                <div class="header__logo">{{ title }}</div>
+            </RouterLink>
 
             <nav class="header__navigation">
                 <ul class="header__navigation-menu">
@@ -10,17 +12,19 @@
                         <a href="">{{ page.title }}</a>
                     </li>
                 </ul>
+			
+                <RouterLink class="header__navigation-link" :to="{ name: 'about', path: '/about-us', component: AboutView }">
+                    <ul class="header__navigation-menu--desktop">
+                        <li>{{ about }}</li>
 
-                <ul class="header__navigation-menu--desktop">
-                    <li>{{ about }}</li>
+                        <li>
+                            <div>{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
+                            <div>{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
+                        </li>
 
-                    <li>
-                        <div>{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
-                        <div>{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
-                    </li>
-
-                    <li>{{ info }}</li>
-                </ul>
+                        <li>{{ info }}</li>
+                    </ul>
+                </RouterLink>
             </nav>
 
             <div class="header__icons">
@@ -31,8 +35,6 @@
             </div>
         </header>
     </section>
-    <!-- Announcement shows only in the top (not fixed) -->
-    <!-- <Announcement />   -->
 </template>
 
 <script>
@@ -67,7 +69,6 @@ import Announcement from '../components/Announcement.vue';
 	};
 </script>
 
-
 <style>
     .header {
         width: 100%;
@@ -75,45 +76,51 @@ import Announcement from '../components/Announcement.vue';
         top: 0;
         left: 0;
         right: 0;
-        padding: var(--lineheight-xsmall) 0;
+        z-index: 40;
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: var(--column-gap);
-        z-index: 10;
+        grid-template-columns: var(--grid-column-12);
+        column-gap: var(--gap-big);
+        margin-bottom: var(--bottom-xsmall);
         transition: all .15s cubic-bezier(.23,1,.32,1);
+        overflow: hidden;
     }
 
     .header__logo {
         font-size: var(--body);
         font-family: var(--main-font);
         grid-column: 1/ span 2;
-        margin-left: var(--lineheight-small);
+        margin-left: var(--bottom-xsmall);
     }
 
     .header__icons {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: right;
         align-items: flex-start;
-        gap: var(--column-gap);
+        gap: var(--gap-big);
         grid-column: 10/ span 3;
-        margin-right: var(--lineheight-small);
+        margin-right: var(--bottom-xsmall);
+        padding-top: var(--bottom-xsmall);
     }
 
-    .header__icons button img {
-        width: 32px;
+    .header__icons-search {
+        width: 22px;
+    }
+
+    .header__icons-hamburger {
+        width: 30px;
     }
 
     .header__navigation {
-        font-size: var(--body);
-        font-family: var(--main-font);  
-        grid-column: 4/ span 6;
         /* background: var(--secondary); */
         transform: translateY(-120%);
         transition: all .3s cubic-bezier(.23,1,.32,1);
+        font-size: var(--body);
+        font-family: var(--main-font);  
+        grid-column: 2/ span 7;
+        margin-top: var(--bottom-medium);
         z-index: 15;
-        overflow: hidden;
-        margin-top: var(--lineheight-medium);
+        overflow: hidden; 
     }
 
     .header__navigation-menu {
@@ -125,6 +132,7 @@ import Announcement from '../components/Announcement.vue';
         list-style: none;   
     }
 
+    .header__navigation-link,
     .header__navigation-menu li a,
     .header__navigation-menu--desktop a {
         text-decoration: none;
@@ -140,7 +148,7 @@ import Announcement from '../components/Announcement.vue';
     }
 
     .header__navigation-menu--desktop li:nth-child(2) {
-        padding: var(--lineheight-small) 0;
+        padding: var(--bottom-small) 0;
     }
 
     /* When navigation is visible navigationVisible class applies */
@@ -152,27 +160,20 @@ import Announcement from '../components/Announcement.vue';
         transform: translateY(0);
     }
 
-    
     /* Medium screen devices (968px and above) */
     @media screen and (min-width: 968px) {
         .header__navigation-menu--desktop {
             display: block;
         }  
 
-        .header__icons, 
-        .navigation__icons {
+        .header__icons {
             grid-column: 12/ span 1;
-        }
-
-        .header__icons img,
-        .navigation__icons img {
-            width: 32px;
         }
         
         .header__navigation{ 
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            column-gap: var(--column-gap);
+            column-gap: var(--gap-big);
             grid-column: 6/ span 6;
             transform: translateY(-110%);
             transition: all .3s cubic-bezier(.23,1,.32,1);

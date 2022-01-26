@@ -4,12 +4,12 @@
     <Articles />
     <Books />
     <Journal />	 
-    <Footer /> 
+    <Footer />   
 </template>
 
 <script>
-    import Announcement from '../components/Announcement.vue';
     import Header from '../components/Header.vue';
+    import Announcement from '../components/Announcement.vue';
     import Footer from '../components/Footer.vue';
     import Books from '../components/Books.vue';
     import Journal from '../components/Journal.vue';
