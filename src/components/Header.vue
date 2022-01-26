@@ -1,34 +1,36 @@
 <template>
-    <!-- navigationVisible class shows only when the hamburger menu clicked -->
-    <header class="header" v-bind:class="{navigationVisible: !isNavigationVisible}">       
-        <div class="header__logo">{{ title }}</div>
+    <section>
+        <!-- navigationVisible class shows only when the hamburger menu clicked -->
+        <header class="header" v-bind:class="{navigationVisible: !isNavigationVisible}">       
+            <div class="header__logo">{{ title }}</div>
 
-        <nav class="header__navigation">
-            <ul class="header__navigation-menu">
-                <li v-for="page in navigationPages" :key="page.id">
-                    <a href="">{{ page.title }}</a>
-                </li>
-            </ul>
+            <nav class="header__navigation">
+                <ul class="header__navigation-menu">
+                    <li v-for="page in navigationPages" :key="page.id">
+                        <a href="">{{ page.title }}</a>
+                    </li>
+                </ul>
 
-            <ul class="header__navigation-menu--desktop">
-                <li>{{ about }}</li>
+                <ul class="header__navigation-menu--desktop">
+                    <li>{{ about }}</li>
 
-                <li>
-                    <div>{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
-                    <div>{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
-                </li>
+                    <li>
+                        <div>{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
+                        <div>{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon"></div>
+                    </li>
 
-                <li>{{ info }}</li>
-            </ul>
-        </nav>
+                    <li>{{ info }}</li>
+                </ul>
+            </nav>
 
-        <div class="header__icons">
-            <button class="header__icons-search"><img src="/svg/search.svg" alt="search-icon"></button>
+            <div class="header__icons">
+                <button class="header__icons-search"><img src="/svg/search.svg" alt="search-icon"></button>
 
-            <!-- toggleNavigation toggling the class name -->
-            <button class="header__icons-hamburger" @click="toggleNavigation"><img src="/svg/hamburger.svg" alt="hamburger-icon"></button>
-        </div>
-    </header>
+                <!-- toggleNavigation toggling the class name -->
+                <button class="header__icons-hamburger" @click="toggleNavigation"><img src="/svg/hamburger.svg" alt="hamburger-icon"></button>
+            </div>
+        </header>
+    </section>
 </template>
 
 <script>
@@ -63,12 +65,7 @@ import Announcement from '../components/Announcement.vue';
 	};
 </script>
 
-
 <style>
-    .header-section {
-        margin-bottom: var(--heading);
-    }
-
     .header {
         width: 100%;
         position: fixed;
@@ -77,17 +74,18 @@ import Announcement from '../components/Announcement.vue';
         right: 0;
         z-index: 40;
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: var(--column-gap);
-        margin: var(--lineheight-xsmall) 0;
+        grid-template-columns: var(--grid-column-12);
+        column-gap: var(--gap-big);
+        margin: var(--bottom-xsmall) 0;
         transition: all .15s cubic-bezier(.23,1,.32,1);
+        overflow: hidden;
     }
 
     .header__logo {
         font-size: var(--body);
         font-family: var(--main-font);
         grid-column: 1/ span 2;
-        margin-left: var(--lineheight-xsmall);
+        margin-left: var(--bottom-xsmall);
     }
 
     .header__icons {
@@ -95,10 +93,10 @@ import Announcement from '../components/Announcement.vue';
         flex-direction: row;
         justify-content: right;
         align-items: flex-start;
-        gap: 5px;
+        gap: var(--gap-small);
         grid-column: 11/ span 2;
-        margin-right: var(--lineheight-small);
-        padding-top: var(--lineheight-xsmall);
+        margin-right: var(--bottom-small);
+        padding-top: var(--bottom-xsmall);
     }
 
     .header__icons button img {
@@ -112,7 +110,7 @@ import Announcement from '../components/Announcement.vue';
         font-size: var(--body);
         font-family: var(--main-font);  
         grid-column: 4/ span 7;
-        margin-top: var(--lineheight-medium);
+        margin-top: var(--bottom-medium);
         z-index: 15;
         overflow: hidden; 
     }
@@ -141,7 +139,7 @@ import Announcement from '../components/Announcement.vue';
     }
 
     .header__navigation-menu--desktop li:nth-child(2) {
-        padding: var(--lineheight-small) 0;
+        padding: var(--bottom-small) 0;
     }
 
     /* When navigation is visible navigationVisible class applies */
@@ -166,7 +164,7 @@ import Announcement from '../components/Announcement.vue';
         .header__navigation{ 
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            column-gap: var(--column-gap);
+            column-gap: var(--gap-big);
             grid-column: 6/ span 6;
             transform: translateY(-110%);
             transition: all .3s cubic-bezier(.23,1,.32,1);

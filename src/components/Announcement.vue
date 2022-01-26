@@ -32,17 +32,17 @@ export default {
         width: 100%;
         height: 62px;
         overflow: hidden;
-        margin-bottom: var(--lineheight-medium);
+        margin-bottom: var(--bottom-medium);
     }
 
     .marquee__announcement  {
         width: 100%;
         position: absolute;
-        top: 5px;
+        top: 0;
         right: 0;
         left: 0;
         white-space: nowrap;
-        padding: 0.35em;
+        padding: 10px;
         animation: marquee 25s linear infinite;
     }
 
