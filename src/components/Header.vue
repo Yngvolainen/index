@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="header-section">
         <!-- navigationVisible class shows only when the hamburger menu clicked -->
         <header class="header" v-bind:class="{navigationVisible: !isNavigationVisible}"> 
             <RouterLink class="header__navigation-link" :to="{ name: 'home', path: '/', component: Home}">      
@@ -80,7 +80,7 @@ import Announcement from '../components/Announcement.vue';
         display: grid;
         grid-template-columns: var(--grid-column-12);
         column-gap: var(--gap-big);
-        margin-bottom: var(--bottom-xsmall);
+        /* margin-bottom: var(--bottom-xsmall); */
         transition: all .15s cubic-bezier(.23,1,.32,1);
         overflow: hidden;
     }
@@ -89,7 +89,7 @@ import Announcement from '../components/Announcement.vue';
         font-size: var(--body);
         font-family: var(--main-font);
         grid-column: 1/ span 2;
-        margin-left: var(--bottom-xsmall);
+        margin: var(--top-xsmall) 0 0 var(--left-small);
     }
 
     .header__icons {
@@ -99,8 +99,8 @@ import Announcement from '../components/Announcement.vue';
         align-items: flex-start;
         gap: var(--gap-big);
         grid-column: 10/ span 3;
-        margin-right: var(--bottom-xsmall);
-        padding-top: var(--bottom-xsmall);
+        margin: var(--top-xsmall) var(--right-small) 0 0;
+        padding-top: var(--top-xsmall);
     }
 
     .header__icons-search {
@@ -114,22 +114,22 @@ import Announcement from '../components/Announcement.vue';
     .header__navigation {
         /* background: var(--secondary); */
         transform: translateY(-120%);
-        transition: all .3s cubic-bezier(.23,1,.32,1);
-        font-size: var(--body);
+        transition: all .3s cubic-bezier(.23,1,.32,1); 
         font-family: var(--main-font);  
-        grid-column: 2/ span 7;
-        margin-top: var(--bottom-medium);
+        grid-column: 2/ span 8;
+        margin-top: var(--top-medium);
         z-index: 15;
-        overflow: hidden; 
+        overflow: hidden;
+        padding: 10px 0; 
     }
 
     .header__navigation-menu {
-        text-align: center;   
+        text-align: center;
     }
 
     .header__navigation-menu li,
     .header__navigation-menu--desktop li {
-        list-style: none;   
+        list-style: none;     
     }
 
     .header__navigation-link,
@@ -137,14 +137,16 @@ import Announcement from '../components/Announcement.vue';
     .header__navigation-menu--desktop a {
         text-decoration: none;
         color: var(--primary);
+        font-size: var(--body);   
     }
 
     .header__navigation-menu--desktop {
         display: none;
+           
     }
 
     .header__navigation-menu--desktop li div img {
-        width: 9px;
+        width: 14px;
     }
 
     .header__navigation-menu--desktop li:nth-child(2) {
@@ -163,8 +165,13 @@ import Announcement from '../components/Announcement.vue';
     /* Medium screen devices (968px and above) */
     @media screen and (min-width: 968px) {
         .header__navigation-menu--desktop {
-            display: block;
+            display: block;            
         }  
+
+        .header__navigation-menu--desktop li > *,
+        .header__navigation-menu--desktop li {
+            font-size: var(--body);
+        }
 
         .header__icons {
             grid-column: 12/ span 1;
