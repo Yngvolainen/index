@@ -71,8 +71,8 @@ export default {
 .footer__navigation-mail {
 	margin-top: 20px;
 }
-
-    @media screen and (min-width: 768px) {
+   /* Medium screen devices (968px and above) */
+    @media screen and (min-width: 968px) {
 		 .footer__title {
 			 grid-column: 1 / span 1;
 		 }
@@ -85,7 +85,7 @@ export default {
 		  }
 		 
 	 }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 968px) {
 		 .footer__title {
 			 grid-column: 1 / span 1;
 		 }
