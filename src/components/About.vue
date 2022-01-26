@@ -1,16 +1,16 @@
 <template> 
 	<div> <Header /> </div>
-		<div class="about" v-for="about in pagesStore">
-			<div class="about__header"> {{ about.content.title }} </div>
-			<div class="about__text"> 
-				<p class="text__section"> {{ about.content.body[0] }} </p>
-				<p class="text__section"> {{ about.content.body[1] }} </p>
-				<p class="text__section"> {{ about.content.body[2] }} </p>
-				<p class="text__section"> {{ about.content.body[3] }} </p>
+	<div class="about" v-for="about in pagesStore">
+		<div class="about__header"> {{ about.content.title }} </div>
+		<div class="about__text"> 
+			<p class="text__section"> {{ about.content.body[0] }} </p>
+			<p class="text__section"> {{ about.content.body[1] }} </p>
+			<p class="text__section"> {{ about.content.body[2] }} </p>
+			<p class="text__section"> {{ about.content.body[3] }} </p>
 
-				<!--  <div class="text__section" v-for="paragraph in pagesStore"> {{ paragraph.content.body }}</div> -->
-			</div>
+			<!--  <div class="text__section" v-for="paragraph in pagesStore"> {{ paragraph.content.body }}</div> -->
 		</div>
+	</div>
 	<div> <Footer /> </div>
 </template>
  
@@ -49,22 +49,19 @@ import Footer from '../components/Footer.vue';
 		font-size: var(--heading);
 		grid-column: 1/ span 12;
 		text-align: center;
-		margin-top: 40px;
-		/* line-height: var(--lineheight-medium); */
 	}
 
 	.about__text {
 		font-size: var(--body);
 		grid-column: 1/ span 12;
 		margin-top: 60px;
-		/* line-height: var(--lineheight-medium); */
 	}
 
 	.text__section {
 		margin-bottom: 40px;
 	}
 
-	/* medium screen and larger */
+	/* tablet and desktop */
 	@media screen and (min-width: 968px)  {
 		.about__header {
 			grid-column: 3/ span 8;
