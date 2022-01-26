@@ -40,7 +40,7 @@
     .fullArticle__author {
         grid-column: 2 /span 4;
         font-size: var(--body);
-        padding-top: var(--lineheight-medium);
+        padding-top: var(--bottom-medium);
         padding-left: var(--outside-margin);
         padding-right: var(--outside-margin);
     }
@@ -50,6 +50,7 @@
         font-size: var(--heading);
         padding-left: var(--outside-margin);
         padding-right: var(--outside-margin);
+        margin-bottom: var(--bottom-medium);
     }
 
     .fullArticle__preview {
@@ -60,18 +61,19 @@
 
     .fullArticle__image-caption {
         font-size: var(--caption);
-        padding: var(--lineheight-xsmall);
+        padding: var(--bottom-xsmall);
+        margin-bottom: var(--bottom-big);
     }
 
     .fullArticle__text {
         grid-column: 3 / span 8;
         font-size: var(--body);
-        margin-bottom: var(--lineheight-big);
+        margin-bottom: var(--bottom-big);
         padding-left: var(--outside-margin);
         padding-right: var(--outside-margin);
     }
 
     .fullArticle__paragraph {
-        padding-bottom: var(--lineheight-medium);
+        padding-bottom: var(--bottom-medium);
     }
 </style>
