@@ -8,8 +8,8 @@
             <p class="article__lead" :class="'article__lead-' + index"> {{ article.lead }}</p>
          </router-link>
 
-         <img class="article__image" :src="article.preview.image"/>
-      </div>  
+         <img class="article__image" :class="'article__image-' + index" :src="article.preview.image"/>
+      </div>   
    </div>
 </template>
 
@@ -46,6 +46,7 @@
    }
 
    .article {
+      grid-column: span 12;
       text-align: center;
       margin-bottom: var(--bottom-big);
       text-decoration: none;
@@ -59,8 +60,7 @@
       color: var(--primary);
       grid-column: span 12; 
       font-size: var(--heading);
-      padding-bottom: var(--bottom-small);
-      
+      padding-bottom: var(--bottom-small);  
    }
 
    .article__lead {
@@ -80,28 +80,32 @@
       }
        
       .article__lead-0 {
-         grid-column: 4 / span 6;   
-
+         margin-left: 17.9%;
+         margin-right: 17.9%;  /* finne bedre løsning */
       }
 
       .article__1 {
          grid-column: 1 / span 6;
       }   
 
-      .article__title-1 {
-         grid-column: 3 / span 8;
+      .article__title-2 {
+         margin-left: 18%;
+         margin-right: 18%;  /* finne bedre løsning */
       }
 
       .article__lead-1 {
-         grid-column: 3 / span 8;   
+         grid-column: 3 / span 8; /* fungerer ikke */
+         margin-left: 18%;
+         margin-right: 18%;  /* finne bedre løsning */  
       }
          
       .article__2 {
          grid-column: 7 / span 6;
       }
 
-      .article__title-2, .article__lead-2 {
-         grid-column: 3 / span 8;
+      .article__lead-2 {
+         margin-left: 16%;
+         margin-right: 16%;  /* finne bedre løsning */
       }
    }
 </style>
