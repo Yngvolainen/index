@@ -75,10 +75,11 @@ import Announcement from '../components/Announcement.vue';
         top: 0;
         left: 0;
         right: 0;
-        padding: var(--lineheight-xsmall) 0;
+        
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         column-gap: var(--column-gap);
+        padding: var(--lineheight-xsmall) 0;
         z-index: 10;
         transition: all .15s cubic-bezier(.23,1,.32,1);
     }
@@ -101,13 +102,13 @@ import Announcement from '../components/Announcement.vue';
     }
 
     .header__icons button img {
-        width: 32px;
+        width: 22px;
     }
 
     .header__navigation {
         font-size: var(--body);
         font-family: var(--main-font);  
-        grid-column: 4/ span 6;
+        grid-column: 4/ span 7;
         /* background: var(--secondary); */
         transform: translateY(-120%);
         transition: all .3s cubic-bezier(.23,1,.32,1);
