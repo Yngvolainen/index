@@ -43,7 +43,7 @@ export default {
   grid-gap: var(--gap-big);
   font-family: var(--main-font);
   padding-bottom: var(--bottom-small);
-  margin-left: var(--outside-margin);
+  margin: var(--outside-margin);
   font-size: var(--body);
   color: var(--primary);
   }
