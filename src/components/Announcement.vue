@@ -62,9 +62,4 @@ export default {
     .marquee__announcement-message:hover {
         animation-play-state: paused;
     }
-
-    /* Medium screen devices (768px and above) */
-    @media screen and (min-width: 768px) {
-
-    }
 </style>
