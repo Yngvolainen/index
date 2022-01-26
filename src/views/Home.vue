@@ -13,7 +13,7 @@
     import Footer from '../components/Footer.vue';
     import Books from '../components/Books.vue';
     import Journal from '../components/Journal.vue';
-    import Articles from '../components/ArticlePreviews.vue';
+    import Articles from '../components/ArticlesHomepage.vue';
 
     export default {
         components: {

@@ -1,22 +1,19 @@
 <template>
     <Header />
-    <FirstArticle />
+    <FullArticle />
     <Footer />
 </template>
 
 <script>
-    import FirstArticle from '../components/FirstArticle.vue';
+    import FullArticle from '../components/FullArticle.vue';
     import Header from '../components/Header.vue';
     import Footer from '../components/Footer.vue';
 
     export default {
         components: {
-            FirstArticle,
+            FullArticle,
             Header,
             Footer
         }
     }
 </script>
-
-<style>
-</style>
