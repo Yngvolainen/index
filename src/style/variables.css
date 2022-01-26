@@ -10,7 +10,7 @@
 	--highlight: #ADFF00;
 
 	/* gaps */
-	--outside-margin: 20px; 
+	--outside-margin: 0px, 20px; 
 	--bottom-big: 100px;
 	--bottom-medium: 40px;
 	--bottom-small: 20px;
