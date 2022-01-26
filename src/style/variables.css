@@ -1,22 +1,24 @@
 :root {
 	/* font-size */
-	--heading: 50px;
-	--body: 30px;
-	--caption: 20px;
+	--heading: 1.6rem;
+	--body: 1rem;
+	--caption: 0.66rem;
 
 	/* colors */
 	--primary: #000000;
 	--secondary: #E3E3E3;
 	--highlight: #ADFF00;
 
-	/* lineheights */
-	--lineheight-big: 100px;
-	--lineheight-medium: 40px;
-	--lineheight-small: 20px;
-	--lineheight-xsmall: 10px;
-
-	/* gap */
-	--column-gap: 10px;
+	/* gaps */
 	--outside-margin: 20px; 
+	--bottom-big: 100px;
+	--bottom-medium: 40px;
+	--bottom-small: 20px;
+	--bottom-xsmall: 10px;
+
+	/* grid */
+	--gap-big: 10px;
+	--gap-small: 5px;
+	--grid-column-12: repeat(12, 1fr);
 }
 
