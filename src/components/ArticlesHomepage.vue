@@ -76,6 +76,7 @@
 
       text-align: center;
       margin-bottom: var(--bottom-big);
+      text-decoration: none;
    } 
 
    .article__title {
@@ -83,7 +84,7 @@
       grid-column: span 12; 
       font-size: var(--heading);
       padding-bottom: var(--bottom-small);
-      /* text-decoration: none; */
+      
    }
 
    .article__lead {
