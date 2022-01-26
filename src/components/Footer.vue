@@ -46,9 +46,7 @@ export default {
   margin-left: var(--outside-margin);
   font-size: var(--body);
   color: var(--primary);
-  margin-top: var(--lineheight-small);
-  
-}
+  }
 
 
 .footer__title, .footer__adress, .footer__navigation {
