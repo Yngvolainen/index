@@ -38,6 +38,10 @@ export default {
         margin-bottom: var(--bottom-medium);
     }
 
+    .books__header h2 {
+        font-size: var(--caption);
+    }
+
     .books__items {
         margin: 1em;
         display: grid;
