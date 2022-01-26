@@ -45,7 +45,7 @@ export default {
         margin-bottom: var(--lineheight-big);
     }
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 968px) {
         .books__items {
             grid-template-columns: repeat(6, 1fr);
         }
