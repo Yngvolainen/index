@@ -1,6 +1,6 @@
 <template> 
 	<div> <Header /> </div>
-	<div class="about" v-for="about in pagesStore">
+	<div class="about" v-for="about in pagesDatabase">
 		<div class="about__header"> {{ about.content.title }} </div>
 		<div class="about__text"> 
 			<p class="text__section"> {{ about.content.body[0] }} </p>
@@ -30,7 +30,7 @@ import Footer from '../components/Footer.vue';
 		},
 		
 		computed: {
-			pagesStore() {
+			pagesDatabase() {
 				return this.$store.getters.getAbout; 
 			}
 		},
