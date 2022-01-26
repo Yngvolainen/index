@@ -106,6 +106,7 @@ export default {
     }
 
     .journal__slideshow-text {
+        font-size: var(--body);
         visibility: visible;
         color: #FFFFFF;
         position: absolute;
@@ -141,7 +142,7 @@ export default {
         background: white;
     }
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 968px) {
         .journal__slideshow div {
             visibility: hidden;
         }
@@ -156,7 +157,7 @@ export default {
 
         .journal__slideshow-text {
             visibility: hidden;
-            transition: .5s ease;
+            /* transition: .5s ease; */
         }
 
         .journal__slideshow-text:hover {
