@@ -4,8 +4,7 @@
             <h2>Journal</h2>
         </div>
 
-        <div class="journal__slideshow" 
-        @click="nextJournalIndex">
+        <div class="journal__slideshow" @click="nextJournalIndex">
             <img class="journal__slideshow-image" :src="journalInfo.image" alt="artsyfartsypicture">
 
             <!-- https://stackoverflow.com/questions/54936363/overlay-on-hover-in-vue-js -->
@@ -24,7 +23,7 @@
                     <button class="journal__slideshow-indicators--inactive"
                         :class="index === journalIndex ? 'journal__slideshow-indicators--active' : ''"
                         @click="shiftJournalIndex(index)">
-                        <!-- above @click gives TypeError on first button 🤔 ,
+                        <!-- above @click gives TypeError on first button 🤔,
                         but does not break page.
                         It´s probably beacause -1 is not valid at first index. 
                         OH WELLLLLL -->
@@ -40,7 +39,7 @@ export default {
     data() {
         return {
             journalIndex: 0,
-            hover: false
+            // hover: false
             // https://michaelnthiessen.com/hover-in-vue/
             // https://javascript.plainenglish.io/implementing-hover-effects-with-vue-js-bacc560ca16c
         }
@@ -63,9 +62,9 @@ export default {
             this.journalIndex = index - 1;
         },
 
-        mouseOver() {
-            this.hover = !this.hover
-        }
+        // mouseOver() {
+        //     this.hover = !this.hover
+        // }
     }
 }
 </script>
@@ -81,7 +80,7 @@ export default {
     }
 
     .journal__slideshow {
-        width: 100vw;
+        width: 100%;
         position: relative;
     }
 
@@ -111,12 +110,13 @@ export default {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 999;
     }
 
     .journal__slideshow-indicators {
         color: white;
         position: absolute;
-        bottom: 2rem;
+        bottom: 1rem;
         left: 50%;
         transform: translate(-50%);
     }
@@ -124,12 +124,12 @@ export default {
     .journal__slideshow-indicators button{
         visibility: visible;
         cursor: default;
-        margin-right: 1rem;
+        margin-right: 15px;
     }
 
     .journal__slideshow-indicators--inactive {
-        width: 1rem;
-        height: 1rem;
+        width: 15px;
+        height: 15px;
         border: 1px solid white;
         border-radius: 50%;
         background: transparent;
@@ -154,12 +154,11 @@ export default {
 
         .journal__slideshow-text {
             visibility: hidden;
-            /* transition: .5s ease; */
         }
 
-        .journal__slideshow-text:hover {
+        /* .journal__slideshow-text:hover {
             background: rgba(0, 0, 0, 0.2);
             transition: .5s ease;
-        }
+        } */
     }
 </style>
