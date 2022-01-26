@@ -79,6 +79,10 @@ export default {
         margin-bottom: var(--bottom-medium);
     }
 
+    .journal__header h2 {
+        font-size: var(--caption);
+    }
+
     .journal__slideshow {
         width: 100%;
         position: relative;
