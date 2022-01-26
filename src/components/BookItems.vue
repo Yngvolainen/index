@@ -35,7 +35,8 @@ export default {
     }
 
     .books__text {
-        font-size: var(--caption);
+        /* font-size: var(--caption); */
+        font-size: 12px;
     }
 
 </style>
