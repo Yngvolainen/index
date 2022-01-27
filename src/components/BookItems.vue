@@ -36,7 +36,19 @@ export default {
 
     .books__text {
         /* font-size: var(--caption); */
-        font-size: 12px;
+        font-size: 19px;
+    }
+
+    @media screen and (min-width: 968px) {
+        .books__text {
+            font-size: 12px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .books__text {
+            font-size: 12px;
+        }
     }
 
 </style>
