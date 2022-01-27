@@ -71,12 +71,12 @@ import Announcement from '../components/Announcement.vue';
 
 <style>
     .header {
-        width: 100%;
+        max-width: 100%;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        z-index: 40;
+        z-index: 400;
         display: grid;
         grid-template-columns: var(--grid-column-12);
         column-gap: var(--gap-big);
@@ -89,7 +89,7 @@ import Announcement from '../components/Announcement.vue';
         font-size: var(--body);
         font-family: var(--main-font);
         grid-column: 1/ span 2;
-        margin: var(--top-xsmall) 0 0 var(--left-small);
+        padding: var(--top-xsmall) 0 0 var(--left-small);
     }
 
     .header__icons {
@@ -99,7 +99,7 @@ import Announcement from '../components/Announcement.vue';
         align-items: flex-start;
         gap: var(--gap-big);
         grid-column: 10/ span 3;
-        margin: var(--top-xsmall) var(--right-small) 0 0;
+        margin: var(--top-xsmall) var(--right-xsmall) 0 0;
         padding-top: var(--top-xsmall);
     }
 
@@ -118,9 +118,10 @@ import Announcement from '../components/Announcement.vue';
         font-family: var(--main-font);  
         grid-column: 2/ span 8;
         margin-top: var(--top-medium);
-        z-index: 15;
+        z-index: 400;
         overflow: hidden;
-        padding: 10px 0; 
+        padding: 5px 0; 
+        display: none;
     }
 
     .header__navigation-menu {
@@ -159,7 +160,8 @@ import Announcement from '../components/Announcement.vue';
     }
  
     .navigationVisible .header__navigation{
-        transform: translateY(0);
+        display: block;
+        transform: translateY(0); 
     }
 
     /* Medium screen devices (968px and above) */
@@ -177,14 +179,15 @@ import Announcement from '../components/Announcement.vue';
             grid-column: 12/ span 1;
         }
         
-        .header__navigation{ 
+        .navigationVisible .header__navigation{
+            display: block;
+            transform: translateY(0);  
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             column-gap: var(--gap-big);
             grid-column: 6/ span 6;
-            transform: translateY(-110%);
             transition: all .3s cubic-bezier(.23,1,.32,1);
-            margin-top: 0; 
+            margin-top: 10px; 
         }
 
         .header__navigation .header__navigation-menu {
