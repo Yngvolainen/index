@@ -45,4 +45,10 @@ export default {
         }
     }
 
+    @media screen and (max-width: 500px) {
+        .books__text {
+            font-size: 12px;
+        }
+    }
+
 </style>
