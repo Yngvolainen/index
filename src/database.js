@@ -90,13 +90,14 @@ export default {
 					writers: 'TERRY SMITH',
 					cover: '/images/book_3.png'
 				},
-				{	title: 'Visual Cultures as Time Travel',
-					writers: 'HENRIETTE GUNKEL, AYESHA HAMEED',
+				{	
+					title: 'Parapolitics',
+					writers: 'ANSELM FRANKE, NIDA GHOUSE, PAZ GUEVARA, ANTONIA MAJACA (EDS.)',
 					cover: '/images/book_4.png'
 				},
 				{
-					title: 'Parapolitics',
-					writers: 'ANSELM FRANKE, NIDA GHOUSE, PAZ GUEVARA, ANTONIA MAJACA (EDS.)',
+					title: 'Visual Cultures as Time Travel',
+					writers: 'HENRIETTE GUNKEL, AYESHA HAMEED',
 					cover: '/images/book_5.png'
 				},
 				{
