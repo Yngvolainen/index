@@ -39,7 +39,7 @@ export default {
     }
 
     .books__header h2 {
-        font-size: var(--caption);
+        font-size: var(--body);
     }
 
     .books__items {
