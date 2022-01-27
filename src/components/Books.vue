@@ -1,5 +1,5 @@
 <template>
-    <div class="books">
+    <div class="books" id="books">
         <header class="books__header">
             <h2>Books</h2>
         </header>
@@ -28,11 +28,6 @@ export default {
 </script>
 
 <style>
-    /* .books {
-        display: grid;
-        grid-template-columns: var(--grid-column-12);
-    } */
-
     .books__header {
         text-align: center;
         margin-bottom: var(--bottom-medium);
