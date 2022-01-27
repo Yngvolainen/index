@@ -54,6 +54,9 @@
 
    .article__link {
       text-decoration: none;
+      display: grid;
+      grid-template-columns: var(--grid-column-12);
+      gap: var(--gap-big);
    }
 
    .article__title {
@@ -80,8 +83,7 @@
       }
        
       .article__lead-0 {
-         margin-left: 17.9%;
-         margin-right: 17.9%;  /* finne bedre løsning */
+         grid-column: 2/ span 10;
       }
 
       .article__1 {
@@ -89,14 +91,11 @@
       }   
 
       .article__title-2 {
-         margin-left: 18%;
-         margin-right: 18%;  /* finne bedre løsning */
+         grid-column: 2/ span 10;
       }
 
       .article__lead-1 {
-         grid-column: 3 / span 8; /* fungerer ikke */
-         margin-left: 18%;
-         margin-right: 18%;  /* finne bedre løsning */  
+         grid-column: 3 / span 8;    
       }
          
       .article__2 {
@@ -104,8 +103,7 @@
       }
 
       .article__lead-2 {
-         margin-left: 16%;
-         margin-right: 16%;  /* finne bedre løsning */
+         grid-column: 3/ span 8;
       }
    }
 </style>
