@@ -1,5 +1,8 @@
 body {
 	font-family: 'JetBrainsMono';
+	position: relative;
+	width: 100%;
+	display: grid;
 }
 
 h3, h2 {
