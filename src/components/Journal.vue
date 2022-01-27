@@ -1,5 +1,5 @@
 <template>
-    <div class="journal">
+    <div class="journal" id="journal">
         <div class="journal__header">
             <h2>Journal</h2>
         </div>
@@ -61,10 +61,6 @@ export default {
         shiftJournalIndex(index) {
             this.journalIndex = index - 1;
         },
-
-        // mouseOver() {
-        //     this.hover = !this.hover
-        // }
     }
 }
 </script>
@@ -80,12 +76,11 @@ export default {
     }
 
     .journal__header h2 {
-        font-size: var(--caption);
+        font-size: var(--body);
     }
 
     .journal__slideshow {
         width: 100%;
-        /* height: 100%; */
         position: relative;
     }
 
@@ -99,14 +94,13 @@ export default {
         height: 100%;
         background: black;
         opacity: 0.2;
-        /* transition: .5s ease; */
     }
 
     .journal__slideshow-text {
         font-size: var(--body);
-        /* visibility: visible; */
         color: #FFFFFF;
         position: absolute;
+        width: 100%;
         /* https://stackoverflow.com/questions/37721175/css-how-to-center-text-vertically-and-horizontally-over-an-image/37721341 */
         top: 50%;
         left: 50%;
@@ -123,7 +117,6 @@ export default {
     }
 
     .journal__slideshow-indicators button{
-        /* visibility: visible; */
         cursor: default;
         margin-right: 17px;
     }
@@ -141,10 +134,6 @@ export default {
     }
 
     @media screen and (min-width: 968px) {
-        .journal__slideshow div {
-            /* visibility: hidden; */
-        }
-
         .journal__slideshow:hover div {
             visibility: visible;
         }
