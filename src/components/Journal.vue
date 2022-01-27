@@ -1,16 +1,16 @@
 <template>
-    <div class="journal">
+    <div class="journal" id="journal">
         <div class="journal__header">
             <h2>Journal</h2>
         </div>
 
         <div class="journal__slideshow" @click="nextJournalIndex">
-            <img class="journal__slideshow-image" :src="journalInfo.image" alt="artsyfartsypicture">
-
             <!-- https://stackoverflow.com/questions/54936363/overlay-on-hover-in-vue-js -->
             <div class="journal__slideshow-overlay">
                 <!-- hacke hacke -->
             </div>
+
+            <img class="journal__slideshow-image" :src="journalInfo.image" alt="artsyfartsypicture">
 
             <div class="journal__slideshow-text">
                 <p>"{{journalInfo.title}}"</p>
@@ -61,10 +61,6 @@ export default {
         shiftJournalIndex(index) {
             this.journalIndex = index - 1;
         },
-
-        // mouseOver() {
-        //     this.hover = !this.hover
-        // }
     }
 }
 </script>
@@ -80,7 +76,7 @@ export default {
     }
 
     .journal__header h2 {
-        font-size: var(--caption);
+        font-size: var(--body);
     }
 
     .journal__slideshow {
@@ -98,18 +94,13 @@ export default {
         height: 100%;
         background: black;
         opacity: 0.2;
-        transition: .5s ease;
-    }
-
-    .journal__slideshow:hover div {
-        visibility: visible;
     }
 
     .journal__slideshow-text {
         font-size: var(--body);
-        visibility: visible;
         color: #FFFFFF;
         position: absolute;
+        width: 100%;
         /* https://stackoverflow.com/questions/37721175/css-how-to-center-text-vertically-and-horizontally-over-an-image/37721341 */
         top: 50%;
         left: 50%;
@@ -126,14 +117,13 @@ export default {
     }
 
     .journal__slideshow-indicators button{
-        visibility: visible;
         cursor: default;
-        margin-right: 15px;
+        margin-right: 17px;
     }
 
     .journal__slideshow-indicators--inactive {
-        width: 15px;
-        height: 15px;
+        width: 17px;
+        height: 17px;
         border: 1px solid white;
         border-radius: 50%;
         background: transparent;
@@ -144,25 +134,27 @@ export default {
     }
 
     @media screen and (min-width: 968px) {
-        .journal__slideshow div {
-            visibility: hidden;
+        .journal__slideshow:hover div {
+            visibility: visible;
         }
 
         .journal__slideshow-overlay {
             opacity: 0;
+            transition: .5s ease;
         }
 
         .journal__slideshow-overlay:hover {
             opacity: 0.2;
+            transition: .5s ease;
         }
 
         .journal__slideshow-text {
             visibility: hidden;
         }
 
-        /* .journal__slideshow-text:hover {
+        .journal__slideshow-text:hover {
             background: rgba(0, 0, 0, 0.2);
             transition: .5s ease;
-        } */
+        }
     }
 </style>
