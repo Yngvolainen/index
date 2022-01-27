@@ -28,6 +28,10 @@ export default {
 </script>
 
 <style>
+    .books {
+        margin: var(--outside-margin);
+    }
+    
     .books__header {
         text-align: center;
         margin-bottom: var(--bottom-medium);
@@ -38,7 +42,6 @@ export default {
     }
 
     .books__items {
-        margin: 1em;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: var(--gap-big);
