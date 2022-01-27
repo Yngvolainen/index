@@ -1,5 +1,6 @@
 <template> 
-	<div> <Header /> </div>
+	<Header />
+	<Announcement />
 	<div class="about" v-for="about in pagesDatabase">
 		<div class="about__header"> {{ about.content.title }} </div>
 		<div class="about__text"> 
@@ -11,16 +12,19 @@
 			<!--  <div class="text__section" v-for="paragraph in pagesStore"> {{ paragraph.content.body }}</div> -->
 		</div>
 	</div>
-	<div> <Footer /> </div>
+	<Footer />
 </template>
  
 <script>
 import Header from '../components/Header.vue';
+import Announcement from './Announcement.vue';
 import Footer from '../components/Footer.vue';
+
 
 	export default {
 		components: {
 			Header,
+			Announcement,
 			Footer
 		},
 
@@ -40,9 +44,9 @@ import Footer from '../components/Footer.vue';
 <style> 
 	.about {
 		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		column-gap: 10px;
-		margin: 0 10px 0 10px;
+		grid-template-columns: var(--grid-column-12);
+		column-gap: var(--gap-big);
+		margin: var(--outside-margin);
 	}
 	
 	.about__header {
@@ -58,7 +62,7 @@ import Footer from '../components/Footer.vue';
 	}
 
 	.text__section {
-		margin-bottom: 40px;
+		margin-bottom: var(--bottom-medium);
 	}
 
 	/* tablet and desktop */
