@@ -42,7 +42,7 @@
       grid-column: 6 / span 2;
       text-align: center;
       font-size: var(--body);
-      margin-bottom: var(--bottom-medium);
+      margin-bottom: var(--bottom-small);
    }
 
    .article {
