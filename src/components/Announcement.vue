@@ -30,7 +30,7 @@ export default {
         right: 0;
         left: 0;
         width: 100%;
-        height: 62px;
+        height: 52px;
         overflow: hidden;
         margin: var(--top-xsmall) 0 80px 0;
     }
