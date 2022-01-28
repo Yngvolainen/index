@@ -56,7 +56,7 @@ export default {
 	
 
 .footer__navigation-icon {
-  width: 9px;
+  width: 14px;
 }
 
 .footer__navigation-link {
