@@ -8,8 +8,6 @@
 			<p class="text__section"> {{ about.content.body[1] }} </p>
 			<p class="text__section"> {{ about.content.body[2] }} </p>
 			<p class="text__section"> {{ about.content.body[3] }} </p>
-
-			<!--  <div class="text__section" v-for="paragraph in pagesStore"> {{ paragraph.content.body }}</div> -->
 		</div>
 	</div>
 	<Footer />
@@ -19,7 +17,6 @@
 import Header from '../components/Header.vue';
 import Announcement from './Announcement.vue';
 import Footer from '../components/Footer.vue';
-
 
 	export default {
 		components: {
