@@ -24,11 +24,6 @@ import Footer from '../components/Footer.vue';
 			Announcement,
 			Footer
 		},
-
-		data() {
-			return {
-			}
-		},
 		
 		computed: {
 			pagesDatabase() {
@@ -55,8 +50,8 @@ import Footer from '../components/Footer.vue';
 	.about__text {
 		font-size: var(--body);
 		grid-column: 1/ span 12;
-		top: 60px;
-		bottom: 120px;
+		margin-top: 60px;
+		margin-bottom: 120px;
 	}
 
 	.text__section {
