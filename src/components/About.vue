@@ -16,7 +16,7 @@
 			pagesDatabase() {
 				return this.$store.getters.getAbout; 
 			}
-		},
+		}
 	};
 </script>
 
