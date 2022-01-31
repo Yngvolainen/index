@@ -1,14 +1,21 @@
 <template>
-    <div class="subby" v-if="subbyVisible" @click="subbyClicked = !subbyClicked">
+    <div class="subby" v-if="subbyVisible" @click="isSubbyClicked">
+
         <div v-if="!subbyClicked" class="subby__caption">
-            Our newsletter will be available soon!
-            <button class="subby__close" @click="subbyVisible = !subbyVisible"><img src="/svg/Close.svg" alt=""></button>
+            <p>Our newsletter will be available soon!</p> 
+
+            <button class="subby__close" @click="subbyVisible = false"><img src="/svg/Close.svg" alt=""></button>
         </div>
 
         <div v-else class="subby__caption--clicked">
-            <span class="subby__textfield"> <input type="email" placeholder="Hodl yer horsies" v-model="email"></span>
-            <button class="subby__submit">submit</button>
-            <button class="subby__close" @click="subbyVisible = !subbyVisible"><img src="/svg/Close.svg" alt=""></button>
+           
+            <input class="subby__textfield" name="email" type="email" placeholder="enter your e-mail" v-model="email">
+
+            <input type="submit" class="subby__submit" value="subscribe" for="email">
+            <!-- <button type="submit" class="subby__submit">subscribe</button> -->
+
+            <button class="subby__close" @click="subbyVisible = false"><img src="/svg/Close.svg" alt=""></button>
+          
         </div>
         
     </div>
@@ -24,7 +31,18 @@ export default {
         }
     },
     methods: {
-
+        isSubbyClicked() {
+            this.subbyClicked = true;
+        }
+    },
+    computed: {
+        backgroundColor() {
+            console.log(this.subbyVisible);
+            let thingy = document.querySelector(".subby");
+            this.subbyVisible === true
+                ? thingy.classList.add(".subbyBackground") 
+                : thingy.classList.remove(".subbyBackground");
+        }
     }
 }
 </script>
@@ -44,7 +62,7 @@ export default {
         font-size: var(--caption);
     }
 
-    .subby:hover {
+    .subbyBackground {
         background: var(--highlight);
         }
 
@@ -53,30 +71,34 @@ export default {
     }
 
     .subby__caption {
+        height: 0.8rem;
+        /* width: 100%; */
         position: relative;
     }
-
-
 
     .subby__caption:hover {
         background: var(--hightlight);
     }
 
+    .subby__caption--clicked {
+        height: 0.8rem;
+        /* width: 100%; */
+        position: relative;
+    }
+
     .subby__textfield {
         margin-right: 20px;
+        border: none;
+        background: inherit;
+        border-bottom: 2px solid black;
     }
     .subby_textfield:hover {
         background: lightgray;
     }
 
-    .subby__textfield input {
-        border: none;
-        background: inherit;
-        border-bottom: 2px solid black;
-    }
-
     .subby__submit {
-        text-decoration: line-through;
+        /* text-decoration: line-through; */
+        border: none;
         background: var(--highlight);
         outline: 3px solid var(--highlight);
         border-radius: 3px;
@@ -85,6 +107,7 @@ export default {
 
     .subby__close {
         position: absolute;
-        right: 0px; 
+        top: 0;
+        right: 0; 
     }
 </style>
