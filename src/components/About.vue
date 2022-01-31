@@ -55,7 +55,8 @@ import Footer from '../components/Footer.vue';
 	.about__text {
 		font-size: var(--body);
 		grid-column: 1/ span 12;
-		margin-top: 60px;
+		top: 60px;
+		bottom: 120px;
 	}
 
 	.text__section {
