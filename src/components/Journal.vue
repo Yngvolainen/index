@@ -5,18 +5,14 @@
         </div>
 
         <div class="journal__slideshow" @click="nextJournalIndex">
-            <!-- https://stackoverflow.com/questions/54936363/overlay-on-hover-in-vue-js -->
-            <div class="journal__slideshow-overlay">
-                <!-- hacke hacke -->
-            </div>
 
             <img class="journal__slideshow-image" :src="journalInfo.image" alt="artsyfartsypicture">
 
-            <div class="journal__slideshow-text">
+            <caption class="journal__slideshow-text">
                 <p>"{{journalInfo.title}}"</p>
                 <p>{{journalInfo.location}}</p>
                 <p>{{journalInfo.artist}}</p>
-            </div>
+            </caption>
 
             <div class="journal__slideshow-indicators">
                 <span v-for="(item, index) in fromJournalData.length" :key="item.id">
@@ -84,16 +80,8 @@ export default {
         position: relative;
     }
 
-    .journal__slideshow-overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: black;
-        opacity: 0.2;
+    .journal__slideshow img {
+        filter: brightness(80%);
     }
 
     .journal__slideshow-text {
@@ -101,11 +89,9 @@ export default {
         color: #FFFFFF;
         position: absolute;
         width: 100%;
-        /* https://stackoverflow.com/questions/37721175/css-how-to-center-text-vertically-and-horizontally-over-an-image/37721341 */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 999;
     }
 
     .journal__slideshow-indicators {
@@ -117,7 +103,6 @@ export default {
     }
 
     .journal__slideshow-indicators button{
-        cursor: default;
         margin-right: 17px;
     }
 
@@ -134,27 +119,22 @@ export default {
     }
 
     @media screen and (min-width: 968px) {
-        .journal__slideshow:hover div {
-            visibility: visible;
-        }
-
-        .journal__slideshow-overlay {
-            opacity: 0;
-            transition: .5s ease;
-        }
-
-        .journal__slideshow-overlay:hover {
-            opacity: 0.2;
-            transition: .5s ease;
-        }
-
         .journal__slideshow-text {
             visibility: hidden;
         }
 
-        .journal__slideshow-text:hover {
-            background: rgba(0, 0, 0, 0.2);
-            transition: .5s ease;
+        .journal__slideshow:hover caption {
+            visibility: visible;
+        }
+
+        .journal__slideshow img {
+            filter: brightness(100%);
+            transition: 0.225s ease;
+        }
+
+        .journal__slideshow:hover img {
+            filter: brightness(80%);
+            transition: 0.225s ease;
         }
     }
 </style>
