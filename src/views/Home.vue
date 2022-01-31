@@ -1,28 +1,22 @@
 <template>
-    <Header />
-    <Announcement />
     <Articles />
     <Books />
     <Journal />	 
-    <Footer />   
+    <Subby />   
 </template>
 
 <script>
-    import Header from '../components/Header.vue';
-    import Announcement from '../components/Announcement.vue';
-    import Footer from '../components/Footer.vue';
+    import Articles from '../components/ArticlesHomepage.vue';
     import Books from '../components/Books.vue';
     import Journal from '../components/Journal.vue';
-    import Articles from '../components/ArticlesHomepage.vue';
+    import Subby from '../components/Subby.vue';
 
     export default {
         components: {
-        Header,
-        Announcement,
         Articles,
         Books,
         Journal,
-        Footer
+        Subby
         },
     }
 </script>

@@ -1,6 +1,4 @@
 <template> 
-	<Header />
-	<Announcement />
 	<div class="about" v-for="about in pagesDatabase">
 		<div class="about__header"> {{ about.content.title }} </div>
 		<div class="about__text"> 
@@ -10,26 +8,15 @@
 			<p class="text__section"> {{ about.content.body[3] }} </p>
 		</div>
 	</div>
-	<Footer />
 </template>
  
 <script>
-import Header from '../components/Header.vue';
-import Announcement from './Announcement.vue';
-import Footer from '../components/Footer.vue';
-
 	export default {
-		components: {
-			Header,
-			Announcement,
-			Footer
-		},
-		
 		computed: {
 			pagesDatabase() {
 				return this.$store.getters.getAbout; 
 			}
-		},
+		}
 	};
 </script>
 
