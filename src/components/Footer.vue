@@ -6,7 +6,7 @@
 		<div class="footer__adress">{{adress}}</div>
 
 		<nav class="footer__navigation">
-			<RouterLink class="footer__navigation-link" :to="{ name: 'about', path: '/about-us', component: AboutView }">
+			<RouterLink class="footer__navigation-link" :to="{ name: 'about' }">
 			<div class="footer__navigation-about">{{about}}</div> 
 			<div class="footer__navigation-social">{{instagram}} <img src="/svg/arrow.svg" alt="arrow-icon" class="footer__navigation-icon"></div> 
 			<div class="footer__navigation-social">{{twitter}} <img src="/svg/arrow.svg" alt="arrow-icon" class="footer__navigation-icon"></div> 

@@ -2,7 +2,7 @@
     <section class="header-section">
         <!-- navigationVisible class shows only when the hamburger menu clicked -->
         <header class="header" v-bind:class="{navigationVisible: !isNavigationVisible}"> 
-            <RouterLink class="header__navigation-link" :to="{ name: 'home', path: '/', component: Home}">      
+            <RouterLink class="header__navigation-link" :to="{ name: 'home' }">      
                 <div class="header__logo">{{ title }}</div>
             </RouterLink>
 
@@ -13,7 +13,7 @@
                     </li>
                 </ul>
 			
-                <RouterLink class="header__navigation-link" :to="{ name: 'about', path: '/about-us', component: AboutView }">
+                <RouterLink class="header__navigation-link" :to="{ name: 'about' }">
                     <ul class="header__navigation-menu--desktop">
                         <li>{{ about }}</li>
 
