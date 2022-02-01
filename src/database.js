@@ -169,6 +169,9 @@ export default {
 
 		getBooks(state) {
 			return state.books
+		},
+		getAddress(state) {
+			return state.information
 		}
 	}
 }
