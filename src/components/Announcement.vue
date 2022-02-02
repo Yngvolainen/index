@@ -43,7 +43,7 @@ export default {
         left: 0;
         white-space: nowrap;
         padding: 10px;
-        animation: marquee 25s linear infinite;
+        animation: marquee 15s linear infinite;
     }
 
     .marquee__announcement span {
@@ -52,10 +52,12 @@ export default {
 
      @keyframes marquee {
         0% {
-            transform: translateX(100%); 
+            left: 100%;
+            transform: translateX(0); 
         }
         100% { 
-            transform: translateX(-62%); 
+            left: 0;
+            transform: translateX(-100%); 
         }
     }
 
