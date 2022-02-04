@@ -3,12 +3,13 @@
       <h2 class="articlesHomepage__header"> {{ header }}</h2>
 
       <div v-for="(article, index) in articles" class="article" :class="'article__' + index">
+
          <router-link :to="{ name: 'article', params: {article_slug: article.slug }}" class="article__link">
             <h3 class="article__title" :class="'article__title-' + index"> {{ article.title }}</h3>
             <p class="article__lead" :class="'article__lead-' + index"> {{ article.lead }}</p>
          </router-link>
 
-         <img class="article__image" :class="'article__image-' + index" :src="article.preview.image"/>
+         <img class="article__image" :class="'article__image-' + index" :src="article.preview.image" :alt="article.preview.caption"/>
       </div>   
    </div>
 </template>
@@ -25,7 +26,7 @@
          articles() {
             return this.$store.getters.getArticles
          },
-      }, 
+      }
    }
 
 </script>

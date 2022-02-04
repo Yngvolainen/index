@@ -1,31 +1,35 @@
 <template>
-    <section class="fullArticle" >
-        <h2 class="fullArticle__author"> {{ articles[ArticleDataIndex].author }} </h2>
-        <h3 class="fullArticle__title"> {{ articles[ArticleDataIndex].title }} </h3>
+    <section v-if="fullArticle" class="fullArticle" >   <!-- show 'fullArticle content based on the slug' -->
+       <h2 class="fullArticle__author"> {{ fullArticle.author }} </h2>
+        <h3 class="fullArticle__title"> {{ fullArticle.title }} </h3>
         
         <figure class="fullArticle__preview">
-            <img class="fullArticle__image" :src="articles[ArticleDataIndex].preview.image" />
-            <figcaption class="fullArticle__image-caption"> {{ articles[ArticleDataIndex].preview.caption }} </figcaption>
+            <img class="fullArticle__image" :src="fullArticle.preview.image" />
+            <figcaption class="fullArticle__image-caption"> {{ fullArticle.preview.caption }} </figcaption>
         </figure>
 
         <div class="fullArticle__text">
-            <div class="fullArticle__paragraph" v-for="paragraph in articles[ArticleDataIndex].body"> {{ paragraph }} </div>
+            <div class="fullArticle__paragraph" v-for="paragraph in fullArticle.body"> {{ paragraph }} </div>
         </div>
     </section>
 </template>
 
 <script>
     export default {
+        props: {
+            article_slug: {
+                type: String
+            },
+        },
+
         computed: {
             articles() {
                 return this.$store.getters.getArticles
             },
+        },
 
-            ArticleDataIndex() {
-                if (this.$route.params.article_slug === 'the-institute-of-the-cosmos') {return 0}
-                if (this.$route.params.article_slug === 'jimmie-durham') {return 1}
-                if (this.$route.params.article_slug === 'mutual-aid-social-distancing-and-dual-power-in-the-state-of-emergency') {return 2}            
-            }
+        created() {                                                                                         /* created method tells vue to do this before creating routerlink */
+            return this.fullArticle = this.articles.find(article => article.slug === this.article_slug)     /* return slug to the current article (give value to slug prop) source: https://router.vuejs.org/guide/essentials/passing-props.html#boolean-mode */
         }
     }
 </script>
