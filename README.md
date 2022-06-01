@@ -1,4 +1,5 @@
 # INDEX
-Prosesser og sånt
+Nettsiden for fiktivt kunstmagasin med artikler, bilder og mer. 
+Hovedfokus på prosesser, mvp og roadmap gjennom prosjektet. 
 
-(tema5gruppe2)
+(Gruppe 2)
